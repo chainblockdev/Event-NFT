@@ -1,0 +1,34 @@
+.like-button {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.heart-icon, .magnifier-icon {
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+
+.heart-icon {
+  color: red;
+}
+
+.magnifier-icon {
+  color: black;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}

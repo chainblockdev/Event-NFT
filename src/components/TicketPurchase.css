@@ -1,0 +1,91 @@
+/* Styles for the main section containing the ticket purchase information */
+.purchase-section {
+  background-color: #2a2b69; /* Dark blue background color */
+  color: white; /* White text color */
+  padding: 50px 20px; /* Padding around the section */
+  text-align: center; /* Center-align text within the section */
+}
+
+/* Styles for the title of the purchase section */
+.purchase-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Font size of the title */
+  margin-bottom: 30px; /* Space below the title */
+}
+
+/* Container for the card elements */
+.purchase-cards {
+  display: flex; /* Use flexbox to arrange cards */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between each card */
+}
+
+/* Individual card styling */
+.purchase-card {
+  background-color: #242565; /* Same dark blue background color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  width: 300px; /* Fixed width for each card */
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow effects */
+}
+
+/* Hover effect for cards */
+.purchase-card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Lift and tilt the card on hover */
+  box-shadow: 0px 20px 60px 0px rgba(61, 55, 241, 0.35); /* Enhanced shadow on hover for more depth */
+}
+
+/* Icon styling inside each card */
+.icon {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Large font size for icons */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+/* Styles for the card titles */
+.purchase-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem; /* Font size for card titles */
+  margin: 10px 0; /* Space above and below the title */
+}
+
+/* Styles for the card text */
+.purchase-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Font size for the paragraph text */
+  line-height: 1.5; /* Line height for better readability */
+}
+
+/* Container for the buttons below the cards */
+.purchase-buttons {
+  margin-top: 30px; /* Space above the button container */
+}
+
+/* General styles for buttons */
+.purchase-button {
+  padding: 10px 20px; /* Padding inside the button */
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Font size for the button text */
+  background-color: transparent; /* Transparent background */
+  color: white; 
+  border: 1.5px solid white; 
+  border-radius: 50px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 10px; /* Horizontal space between buttons */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* Additional styles for the primary button */
+.purchase-button.primary {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5167E; /* Pink background color */
+  border: none; /* No border */
+  box-shadow: 0px 10px 50px rgba(61, 55, 241, 0.25); /* Shadow for depth */
+  padding: 13px 42px; /* Same padding as .purchase-button */
+}
+/* Hover effect for all buttons */
+.purchase-button:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #242565; /* Dark blue text color on hover */
+}

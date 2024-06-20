@@ -1,0 +1,98 @@
+.event-section {
+  padding: 100px 40px;
+  margin-top: 50px; /* Add space between sections */
+}
+
+.section-header {
+  display: flex;
+  justify-content: flex-start; /* Left-align the content horizontally */
+  align-items: center; /* Vertically center the items */
+  margin-bottom: 30px; /* Space between the title and event cards */
+  gap: 410px; /* Space between the title and buttons */
+  padding: 10px 40px; /* Adjusted size to match the design */
+  position: relative; /* For positioning the line */
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #242565;
+  margin: 0;
+  padding-right: 50px; /* Adjust padding to move the title slightly to the right */
+  text-align: left; /* Align text to the left */
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 18px; /* Space between buttons */
+  justify-content: flex-start;
+  margin-top: 0; /* Reduced margin for closer spacing */
+}
+
+.filter-button {
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background-color: #F2F4FF;
+  color: #1D275F;
+  border: 1px solid #F2F4FF;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex; /* Flex display to align text and icon */
+  align-items: center; /* Center align text and icon */
+  position: relative; /* To position the icon absolutely within the button */
+}
+
+.filter-button::after {
+  content: '';
+  width: 13px; /* Width of the SVG */
+  height: 6px; /* Height of the SVG */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none"><path d="M1.33942 1.5L6.33942 6.5L11.3394 1.5" stroke="%231D275F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 2px; /* Adjust as needed to position the icon */
+}
+
+.filter-button:hover {
+  background-color: #F0F0F0;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ddd; /* Line color */
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the event cards */
+  gap: 20px;
+}
+
+.load-more-button {
+  width: 182px;
+  height: 60px;
+  flex-shrink: 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #FFF;
+  color: #3D37F1;
+  border: 1.5px solid #3D37F1;
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  display: block; /* Make the button take up its own line */
+  margin-left: auto; /* Center the button */
+  margin-right: auto; /* Center the button */
+}

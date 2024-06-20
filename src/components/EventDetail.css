@@ -1,0 +1,91 @@
+/* Reset default margins and paddings, and prevent horizontal overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Main wrapper for the event detail section */
+.event-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Background section including image and info bar */
+.event-background {
+  background-image: url('./../../public/Eventdetail/whale.png');
+  width: 100%;
+  height: 70vh;  /* Set a specific height for the background */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Event info bar style */
+.event-info-bar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-meta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%; /* Adjust width as necessary */
+}
+
+.event-location, .event-date, .event-price {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.event-purchase-button {
+  padding: 10px 20px;
+  background-color: #ff007f; /* Bright accent color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Description section style */
+.event-description {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px; /* Gap between background and description */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  max-width: 1000px; /* Control width for readability */
+  margin-left: auto;
+  margin-right: auto; /* Centering */
+  border-radius: 10px;
+}
+
+.participant-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 5px;
+}
+
+/* Additional styles for the map */
+.event-map {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}

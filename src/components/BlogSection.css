@@ -1,0 +1,80 @@
+.blog-wrapper {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-wrapper h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  color: #242565;
+  margin-bottom: 10px;
+}
+
+.blog-wrapper p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.blog-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Reduced gap between blog cards */
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 10px; /* Reduced margin between blog cards */
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; /* Reduced space between the image and content */
+}
+
+.blog-content {
+  padding: 10px;
+}
+
+.blog-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.blog-description {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.blog-meta {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.read-more-button {
+  padding: 10px 40px;
+  font-size: 1rem;
+  color: #3D37F1;
+  background-color: transparent;
+  border: 2px solid #3D37F1;
+  border-radius: 50px; /* Make it oval */
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block; /* Adjust display to inline-block */
+}

@@ -1,0 +1,95 @@
+/* EventCard.css */
+
+.event-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.event-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.event-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.event-card-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #3D37F1;
+  margin-right: 10px;
+}
+
+.event-card-day {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.event-card-month {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #3D37F1;
+}
+
+.event-card-details {
+  text-align: left;
+  flex: 1;
+}
+
+.event-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #000;
+  margin-top: -45px;
+}
+
+.event-card-description {
+  font-size: 0.8rem;
+  color: #6A6A6A;
+  margin-top: 5px;
+ 
+}
+
+.event-card-icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.event-card-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.event-card-icon.heart {
+  background-color: #F5167E;
+  color: white;
+  border-radius: 5px;
+}
+
+.event-card-icon.search {
+  background-color: #1D275F;
+  color: white;
+  border-radius: 5px;
+}

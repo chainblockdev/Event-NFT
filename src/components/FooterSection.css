@@ -1,0 +1,117 @@
+.footer-wrapper {
+  background-color: #0A075F;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-column h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-column p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.subscribe-form {
+  width: 290px;
+  height: 60.843px;
+  flex-shrink: 0;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 45.595px;
+  border: 2px solid #F1F1F1;
+  padding: 2px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.subscribe-form input {
+  width: calc(100% - 80px);
+  height: 35px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  background: #FFF;
+  outline: none;
+  color: #959595;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.159px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.subscribe-form button {
+  height: 50px;
+  padding: 0 20px;
+  background-color: #F5167E;
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.159px;
+  font-style: normal;
+  font-weight: 200;
+  margin-left: -90px; /* This ensures the button sits inside the oval properly */
+  z-index: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
