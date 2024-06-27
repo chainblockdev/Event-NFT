@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
@@ -9,6 +10,7 @@ import BrandsSection from './components/BrandsSection';
 import BlogSection from './components/BlogSection';
 import FooterSection from './components/FooterSection';
 import EventDetail from './components/EventDetail'; // Import EventDetail component
+import UpcomingEvents from './components/UpcomingEvents'; // Import UpcomingEvents component
 import './App.css';
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
             </>
           } />
           <Route path="/event/:id" element={<EventDetail />} />
+          <Route path="/upcomingevents" element={<UpcomingEvents />} /> {/* Add route for UpcomingEvents */}
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,1145 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Main background wrapper */
+.UpcomingEvents-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    padding-top: 50px;
+}
+
+/* Navigation bar styling */
+.nav-barUpcomingEvents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo container */
+.logo-containerUpcomingEvents {
+    flex: 1;
+}
+
+/* Logo image styling */
+.logo-imgUpcomingEvents {
+    width: 250px;
+    margin-right: 290px;
+}
+
+/* Navigation links container */
+.nav-linksUpcomingEvents {
+    display: flex;
+    gap: 45px;
+}
+
+/* Navigation link styling */
+.nav-linkUpcomingEvents {
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Wallet button styling in background section */
+.UpcomingEvents-background .wallet-buttonUpcomingEvents {
+    padding: 10px 20px;
+    margin-top: -10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #FFF;
+    border-radius: 50px; /* Makes the button oval-shaped */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Wallet button hover effect in background section */
+.UpcomingEvents-background .wallet-buttonUpcomingEvents:hover {
+    background-color: white;
+    color: #242565;
+}
+
+/* Search bar styling */
+.search-barUpcomingEvents {
+    width: 70%;
+    border-radius: 20px;
+    background: #242565;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 60px;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 30px;
+}
+
+/* Search select container styling */
+.search-select-containerUpcomingEvents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    flex: 1; /* Added to allow the container to grow */
+    margin: 0 10px; /* Added to add spacing between the select containers */
+}
+
+/* Search select label styling */
+.search-select-labelUpcomingEvents {
+    margin-bottom: 5px;
+    margin-left: 15px;
+    font-size: 0.875rem; /* Added to match the label size in the image */
+}
+
+/* Search select element styling */
+.search-selectUpcomingEvents {
+    padding: 10px;
+    font-size: 1.25rem; /* Increased font size to match the image */
+ 
+    border: none;
+    background-color: transparent; /* Makes the background transparent */
+    color: white; /* Sets the text color to white */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Added border bottom to match the image */
+    width: 100%; /* Ensures the select box takes full width */
+}
+
+/* Events container styling */
+.events-containerUpcomingEvents {
+    padding: 40px 0;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Events title styling */
+.events-titleUpcomingEvents {
+    font-family: 'Inter', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #242565;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: -520px;
+}
+
+/* Event cards container styling */
+.event-cardsUpcomingEvents {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual event card styling */
+.event-cardUpcomingEvents {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+/* Event card image styling */
+.event-cardUpcomingEvents img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Event card content styling */
+.event-card-contentUpcomingEvents {
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px;
+}
+
+/* Event card date styling */
+.event-card-dateUpcomingEvents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px; /* Add space between date and text */
+}
+
+.event-card-dateUpcomingEvents .month {
+    color: #3D37F1; /* Default color, can be adjusted */
+    font-family: 'Inter', sans-serif;
+    font-size: 11.372px; /* Default size, can be adjusted */
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2px; /* Adjust spacing between month and day */
+}
+
+.event-card-dateUpcomingEvents .day {
+    color: #000; /* Default color, can be adjusted */
+    font-family: 'Inter', sans-serif;
+    font-size: 28.429px; /* Default size, can be adjusted */
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Event card text content */
+.event-card-textUpcomingEvents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to the start */
+}
+
+/* Event card title styling */
+.event-card-titleUpcomingEvents {
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Event card description styling */
+.event-card-descriptionUpcomingEvents {
+    color: #6A6A6A;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Dot container styling */
+.dot-containerUpcomingEvents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Individual dot styling */
+.dotUpcomingEvents {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dotUpcomingEvents:nth-child(1) {
+    background-color: #3A3B74; /* First dot color */
+}
+
+.dotUpcomingEvents:nth-child(2) {
+    background-color: #3A3B7494; /* Second dot color */
+}
+
+.dotUpcomingEvents:nth-child(3) {
+    background-color: #3A3B7433; /* Third dot color */
+}
+
+
+/* Hover effect for dots */
+.dotUpcomingEvents:hover {
+    background-color: #555; /* Optional hover color */
+}
+
+/* Concerts container styling */
+.concerts-containerUpcomingEvents {
+    padding: 40px 0;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Concerts header styling */
+.concerts-headerUpcomingEvents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
+/* Concerts title styling */
+.concerts-titleUpcomingEvents {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    color: #242565;
+    margin-bottom: 20px;
+    margin-left: 210px;
+}
+
+/* Filter container styling */
+.filter-containerUpcomingEvents {
+    display: flex;
+    align-items: center;
+    margin-right: 270px;
+    margin-bottom: -1px;
+}
+
+/* Filter icon styling */
+.filter-iconUpcomingEvents {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-right: 5px;
+}
+
+/* Filter text styling */
+.filter-textUpcomingEvents {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #242565;
+}
+
+/* Line styling */
+.lineUpcomingEvents {
+    width: calc(85% - 40px); /* Sets the width of the line to 90% of the container's width minus 40px to account for padding */
+    height: 1px; /* Sets the height of the line to 1 pixel */
+    background-color: #ddd; /* Sets the background color of the line to a light gray color */
+    margin: 10px 170px 0; /* Adds 10px margin to the top, centers the line horizontally with auto left and right margins, and removes margin from the bottom */
+}
+
+/* Concert cards container styling */
+.concert-cardsUpcomingEvents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual concert card styling */
+.concert-cardUpcomingEvents {
+    display: flex;
+    background: white;
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Faded concert card styling */
+.concert-cardUpcomingEvents.faded {
+    opacity: 0.3;
+}
+
+/* Concert card image styling */
+.concert-cardUpcomingEvents img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin-right: 20px;
+    object-fit: cover;
+    width: 133px;
+    height: 135.512px;
+    flex-shrink: 0;
+}
+
+/* Concert card content styling */
+.concert-card-contentUpcomingEvents {
+    display: flex; 
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items to the start (left) */
+    flex: 1;
+    text-align: left;
+}
+
+/* Concert card date styling */
+.concert-card-dateUpcomingEvents {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+/* Concert card title styling */
+.concert-card-titleUpcomingEvents {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+/* Concert card location styling */
+.concert-card-locationUpcomingEvents {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+
+/* Concert card buttons container styling */
+.concert-card-buttonsUpcomingEvents {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add space between buttons */
+    margin-left: 500px;
+    margin-top: -85px;
+}
+
+/* Details button styling */
+.details-buttonUpcomingEvents {
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 21.6px */
+    background-color: transparent;
+    color: #F5167E;
+    border: 1px solid #F5167E; /* Changed border color to match the image */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center; /* Center text */
+}
+
+/* Buy button styling */
+.buy-buttonUpcomingEvents {
+    padding: 10px 20px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 21.6px */
+    border-radius: 50px;
+    border: 1px solid #F5167E;
+    background: #F5167E;
+
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center; /* Center text */
+}
+
+/* Details button hover effect */
+.details-buttonUpcomingEvents:hover {
+    background-color: #f0e4ea; /* Changed to match the hover effect in the image */
+    color: white;
+}
+
+/* Buy button hover effect */
+.buy-buttonUpcomingEvents:hover {
+    background-color: #ff4d94;
+}
+
+/* Show more styling */
+.show-moreUpcomingEvents {
+    margin-top: 20px;
+    color: #ff007a;
+    cursor: pointer;
+}
+
+/* Purchase container styling */
+.purchase-containerUpcomingEvents {
+    padding: 40px 20px;
+    background-color: #242565;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+/* Purchase title styling */
+.purchase-titleUpcomingEvents {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+/* Purchase description styling - NEW */
+.purchase-descriptionUpcomingEvents {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; /* Default font size, can be adjusted */
+    color: #FFFFFF; /* Default color, can be adjusted */
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%; /* 23.4px */
+    margin-bottom: 20px; /* Default margin, can be adjusted */
+}
+
+/* Purchase steps container styling */
+.purchase-stepsUpcomingEvents {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Individual purchase step styling */
+.purchase-stepUpcomingEvents {
+    background-color: #242565; /* Same dark blue background color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    width: 342px;/* Fixed width for each card */
+    height: 300px;
+    font-size: 12px;
+    font-weight: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex-shrink: 0;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25); /* Shadow for depth */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow effects */
+}
+
+/* Hover effect for cards */
+.purchase-stepUpcomingEvents:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Lift and tilt the card on hover */
+  box-shadow: 0px 20px 60px 0px rgba(61, 55, 241, 0.35); /* Enhanced shadow on hover for more depth */
+}
+
+
+/* Purchase step icon styling */
+.purchase-iconUpcomingEvents {
+    width: 70px;
+    height: 70px;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem; /* Large font size for icons */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+/* Purchase buttons container styling */
+.purchase-buttonsUpcomingEvents {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Purchase button styling */
+.purchase-buttonUpcomingEvents,
+.wallet-buttonUpcomingEvents {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Purchase button specific styling */
+.purchase-buttonUpcomingEvents {
+    border-radius: 50px;
+    background: #F5167E;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    width: 182px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+/* Purchase button hover effect */
+.purchase-buttonUpcomingEvents:hover {
+    background-color: #ff4d94;
+}
+
+/* Wallet button specific styling */
+.wallet-buttonUpcomingEvents {
+    background-color: transparent;
+    color: #FFF;
+    text-align: center;
+    border-radius: 50px;
+    border: 1.5px solid #FFF;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 50px;
+    opacity: 0.9;
+    background: #242565;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    width: 182px;
+    height: 60px;
+    flex-shrink: 0;
+ 
+}
+
+/* Wallet button hover effect */
+.wallet-buttonUpcomingEvents:hover {
+    background-color: white;
+    color: #1a1a3d;
+}
+
+/* Wallet prompt container styling */
+.wallet-prompt-containerUpcomingEvents {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wallet prompt content styling */
+.wallet-prompt-contentUpcomingEvents {
+  display: flex; /* Enables flexbox layout for the container */
+  align-items: center; /* Centers items vertically within the container */
+  justify-content: center; /* Centers items horizontally within the container */
+  background-color: #EEE1FF;; /* Light purple background color */
+  padding: 50px 20px; /* Adds padding of 50px on the top and bottom, and 20px on the left and right */
+  text-align: center; /* Centers the text within the container */
+  margin: 50px auto; /* Adds a top margin of 50px and centers the container */
+  width: 1000px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+/* Wallet prompt image styling */
+.wallet-prompt-imageUpcomingEvents {
+    max-width: 600px; /* Set a max width for the wallet image */
+    margin-right: 30px;
+ 
+}
+
+/* Wallet prompt text container styling */
+.wallet-prompt-textUpcomingEvents {
+    flex: 1;
+    text-align: left;
+}
+
+/* Wallet prompt heading styling */
+.wallet-prompt-textUpcomingEvents h3 {
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+/* Wallet prompt paragraph styling */
+.wallet-prompt-textUpcomingEvents p {
+    margin-bottom: 20px;
+    color: #272727;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Wallet prompt button styling */
+.wallet-prompt-buttonUpcomingEvents {
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background-color: #f5167e; /* Button background color */
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Wallet prompt button hover effect */
+.wallet-prompt-buttonUpcomingEvents:hover {
+    background-color: #ff4d94;
+}
+
+/* Upcoming events container styling */
+.upcoming-events-containerUpcomingEvents {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #242565;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Upcoming events header styling */
+.upcoming-events-headerUpcomingEvents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Upcoming events title styling */
+.upcoming-events-titleUpcomingEvents {
+    font-family: 'Inter', sans-serif;
+    color: #242565;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Upcoming events filter buttons container styling */
+.upcoming-events-filterUpcomingEvents {
+    display: flex;
+    gap: 20px;
+}
+
+/* Filter button styling */
+.filter-buttonUpcomingEvents {
+    padding: 10px 20px;
+    width: 160px;
+    height: 46px;
+    flex-shrink: 0;
+    color: #1D275F;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #F2F4FF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative; /* Needed for positioning the icon */
+    padding-right: 90px; /* Space for the icon */
+}
+
+/* Filter button icon styling */
+.filter-buttonUpcomingEvents::after {
+    content: '';
+    background-image: url('../assets/icons/Vector.svg'); /* Path to your vector icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 5px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #1D275F;
+    position: absolute;
+    right: 10px; /* Position the icon inside the button */
+    top: 50%;
+    padding-right: -10% ;
+    transform: translateY(-50%); /* Center the icon vertically */
+    pointer-events: none; /* Ensure the icon does not block button clicks */
+}
+
+
+/* Filter button hover effect */
+.filter-buttonUpcomingEvents:hover {
+    background-color: #e0e0ff;
+}
+
+/* Line below the upcoming events header */
+.upcoming-events-line {
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+/* Upcoming event cards container styling */
+.upcoming-event-cardsUpcomingEvents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual upcoming event card styling */
+.upcoming-event-cardUpcomingEvents {
+    border-radius: 18.953px 18.953px 0px 0px;
+    background: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+/* Upcoming event card image styling */
+.upcoming-event-cardUpcomingEvents img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Upcoming event card content styling */
+.upcoming-event-card-contentUpcomingEvents {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 330px;
+    height: 100px;
+}
+
+/* Upcoming event card date styling */
+.upcoming-event-card-dateUpcomingEvents {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Upcoming event card month styling */
+.upcoming-event-card-dateUpcomingEvents .month {
+    color: #3D37F1;
+}
+
+/* Upcoming event card day styling */
+.upcoming-event-card-dateUpcomingEvents .day {
+    font-size: 1.5rem;
+    color: #242565;
+}
+
+/* Upcoming event card title styling */
+.upcoming-event-card-titleUpcomingEvents {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #242565;
+    margin-top: -60px;
+    margin-left: 90px;
+ 
+}
+
+/* Upcoming event card description styling */
+.upcoming-event-card-descriptionUpcomingEvents {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.4;
+    margin-left: 90px;
+    margin-right: 20px;
+    padding: 10px 0;
+}
+
+/* Ensure the parent container is positioned relative */
+.upcoming-event-cardUpcomingEvents {
+    position: relative;
+    display: inline-block; /* Adjust as needed */
+}
+
+/* Ensure the image takes the full width of the container */
+.upcoming-event-cardUpcomingEvents img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* This styles the container that holds the event card buttons */
+.event-card-buttonsUpcomingEvents {
+    position: absolute; /* Position the container absolutely */
+    bottom: 125px; /* Position from the bottom of the parent container */
+    right: 10px; /* Position from the right of the parent container */
+    display: flex; /* Use flexbox for layout */
+    gap: 8px; /* Space between buttons */
+
+}
+
+/* This styles each individual button inside the container */
+.event-card-buttonUpcomingEvents {
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    width: 36px; /* Set width of the button */
+    height: 36px; /* Set height of the button */
+    display: flex; /* Use flexbox for the button layout */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    border-radius: 10px; /* Make the button square with rounded corners */
+    border: none; /* Remove any border around the button */
+}
+
+/* This styles the search button specifically */
+.event-card-buttonUpcomingEvents.search {
+    background: #242565; /* Set background color to blue */
+}
+
+/* This styles the heart button specifically */
+.event-card-buttonUpcomingEvents.favorite {
+    background: #EF466F; /* Set background color to pink */
+}
+
+/* This styles the images inside the buttons */
+.event-card-buttonUpcomingEvents img {
+    width: 20px; /* Set width of the image */
+    height: 20px; /* Set height of the image */
+}
+
+
+
+
+/* Show more button styling */
+.upcoming-events-show-moreUpcomingEvents {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #3D37F1;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1.5px solid #3D37F1;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Show more button hover effect */
+.upcoming-events-show-moreUpcomingEvents:hover {
+    background-color: #ff4d94;
+}
+
+/* Footer styling */
+.footerUpcomingEvents {
+    background-color:#0A075F;
+    color: #F3F3F3;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 160%; /* 22.4px */
+    padding: 40px 20px;
+    text-align: left;
+}
+
+/* Footer content container styling */
+.footer-contentUpcomingEvents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Footer logo section styling */
+.footer-logo-sectionUpcomingEvents {
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Footer logo image styling */
+.footer-logoUpcomingEvents {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Footer social icons container styling */
+.footer-social-iconsUpcomingEvents a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Footer links section styling */
+.footer-links-sectionUpcomingEvents {
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    max-width: 200px;
+   margin-top: 60px;
+}
+
+/* Footer links section heading styling */
+.footer-links-sectionUpcomingEvents h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer links list styling */
+.footer-links-sectionUpcomingEvents ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Footer links list item styling */
+.footer-links-sectionUpcomingEvents ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer links anchor tag styling */
+.footer-links-sectionUpcomingEvents ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Footer links anchor tag hover effect */
+.footer-links-sectionUpcomingEvents ul li a:hover {
+    color: #FF007A;
+}
+
+/* Footer newsletter section styling */
+.footer-newsletter-sectionUpcomingEvents {
+    flex: 2;
+    font-family: 'Inter', sans-serif;
+    max-width: 300px;
+    margin-top: 60px;
+  
+}
+
+/* Footer newsletter section heading styling */
+.footer-newsletter-sectionUpcomingEvents h3 {
+    margin-bottom: 10px;
+    margin-left: -30px;
+}
+
+/* Footer newsletter section paragraph styling */
+.footer-newsletter-sectionUpcomingEvents p {
+    margin-bottom: 20px;
+    margin-left: -30px;
+}
+
+/* Footer newsletter form styling */
+.footer-newsletter-sectionUpcomingEvents form {
+    display: flex;
+}
+
+/* Container for the newsletter section */
+.footer-newsletter-sectionUpcomingEvents form {
+    display: flex; /* Use flexbox to arrange input and button */
+    align-items: center; /* Center align items vertically */
+    width: 330px;
+    height: 60px;
+    padding: 5px; /* Add padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    overflow: hidden; /* Ensure child elements do not overflow the container */
+    border-radius: 50px; /* Add rounded corners */
+    background-color: #FFF; /* Set background color to white */
+    border: 2px solid #F1F1F1; /* Add border */
+    margin-left: -40px;
+}
+
+/* Footer newsletter email input styling */
+.footer-newsletter-sectionUpcomingEvents input[type="email"] {
+    flex: 1; /* Allow the input to take up the remaining space */
+    padding: 10px 10px; /* Add padding inside the input */
+    border: none; /* Remove the default border */
+    border-radius: 45px 0 0 45px; /* Round the left corners of the input */
+    outline: none; /* Remove the default outline */
+    font-family: 'Inter', sans-serif;
+    border-right: none; /* Remove right border */
+    font-size:14px;
+}
+
+/* Footer newsletter button styling */
+.footer-newsletter-sectionUpcomingEvents button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px; /* Round the right corners of the button */
+    background-color: #FF007A;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 60px;
+    transition: background-color 0.3s;
+    margin-left: -10px;
+    font-size:14px;
+}
+
+/* Footer newsletter button hover effect */
+.footer-newsletter-sectionUpcomingEvents button:hover {
+    background-color: #FF4D94;
+}
+
+
+/* Footer bottom section styling */
+.footer-bottomUpcomingEvents {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 0.875rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .nav-barUpcomingEvents {
+        flex-direction: column;
+    }
+
+    .search-barUpcomingEvents {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .event-cardsUpcomingEvents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .concert-cardsUpcomingEvents {
+        width: 100%;
+    }
+
+    .concert-cardUpcomingEvents {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .upcoming-event-cardUpcomingEvents {
+        width: 100%;
+    }
+
+    .footer-contentUpcomingEvents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo-sectionUpcomingEvents,
+    .footer-links-sectionUpcomingEvents,
+    .footer-newsletter-sectionUpcomingEvents {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-newsletter-sectionUpcomingEvents form {
+        flex-direction: column;
+    }
+
+    .footer-newsletter-sectionUpcomingEvents input[type="email"] {
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-newsletter-sectionUpcomingEvents button {
+        border-radius: 20px;
+    }
+}

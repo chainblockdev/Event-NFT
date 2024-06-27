@@ -1,4 +1,6 @@
+// src/components/HeroSection.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 import logo from './Logo.png'; // Adjust the import path as needed
 
@@ -10,7 +12,7 @@ const HeroSection = () => (
         <img src={logo} alt="EventiNFT Logo" className="logo-img" />
       </div>
       <div className="nav-links">
-        <a className="nav-link" href="#eventi">Eventi</a>
+        <Link className="nav-link" to="/upcomingevents">Eventi</Link>
         <a className="nav-link" href="#acquista">Acquista</a>
         <a className="nav-link" href="#ticket">Ticket</a>
         <a className="nav-link" href="#contatti">Contatti</a>

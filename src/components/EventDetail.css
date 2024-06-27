@@ -4,82 +4,302 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   height: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Main wrapper for the event detail section */
-.event-detail {
+/* Navigation bar styling */
+.nav-barEventDetail {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 70%;
+  box-sizing: border-box;
+  position: relative;
+  top: -10px;
+  margin-left: 80px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .nav-barEventDetail {
+    padding: 10px 5%;
+    flex-direction: column;
+  }
+}
+
+/* Logo container */
+.logo-containerEventDetail {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 350px;
+  gap: 16px;
+}
+
+/* Logo image styling */
+.logo-imgEventDetail {
+  width: 200px;
+  height: auto;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+
+/* Navigation links container */
+.nav-linksEventDetail {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .nav-linksEventDetail {
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Individual navigation link */
+.nav-linkEventDetail {
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.nav-linkEventDetail:hover {
+  text-decoration: underline;
+}
+
+/* Wallet button in the nav bar */
+.nav-barEventDetail .wallet-buttonEventDetail {
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: #FFF;
+  border-radius: 50px;
+  border: 1.5px solid #FFF;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 10px;
 }
 
 /* Background section including image and info bar */
 .event-background {
-  background-image: url('./../../public/Eventdetail/whale.png');
   width: 100%;
-  height: 70vh;  /* Set a specific height for the background */
+  height: 90vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  background: url(../../public/whale.png) lightgray 36.31px 0px / 95.238% 118.804% no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 /* Event info bar style */
-.event-info-bar {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+.event-info-barEventDetail {
+  width: 80%;
+  border-radius: 20px;
+  background: #242565;
   color: white;
-  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+  bottom: 60px;
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 20px;
 }
 
 .event-meta {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 80%; /* Adjust width as necessary */
+  width: 90%;
+  padding: 10px;
 }
 
-.event-location, .event-date, .event-price {
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+/* Adjust .event-location-date to stack items vertically */
+.event-location-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-left: 30px;
+}
+
+/* Ensure .event-location and .event-date are aligned with icons */
+.event-location, .event-date {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.event-location .icon, .event-date .icon {
+  margin-right: 8px;
+}
+
+.event-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.price-label {
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.event-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px 15px;
   margin: 5px;
+  margin-left: -22px;
+  margin-top: -11px; /* Add this line to reduce the gap */
+  flex: 1;
 }
 
-.event-purchase-button {
+/* Event purchase button */
+.event-purchase-EventDetail-button {
   padding: 10px 20px;
-  background-color: #ff007f; /* Bright accent color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 159px;
+  height: 56px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: #F5167E;
   border: none;
-  border-radius: 5px;
+  border-radius: 32px;
   cursor: pointer;
   color: white;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 50px;
 }
+
+/* Reusable avatar styling */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 28px;
+  border: 2px solid var(--Additional-White, #FFF);
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: -20px;
+  z-index: 1;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.participant-avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.event-participants .label {
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.event-participants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Participant avatar styling */
+.participant-avatar-container {
+  display: flex;
+  align-items: center;
+}
+
+.participant-avatar {
+  width: 40px; /* Updated width to match image */
+  height: 40px; /* Updated height to match image */
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -15px; /* Creates the overlap effect */
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensures avatars stack correctly */
+}
+
+.participant-avatar:first-child {
+  margin-left: 0; /* No overlap for the first avatar */
+}
+
+.participant-count {
+  color: white;
+  font-size: 16px; /* Adjusted font size for better visibility */
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* Description section style */
 .event-description {
   width: 100%;
-  padding: 20px;
-  margin-top: 20px; /* Gap between background and description */
+  padding: 20px 40px;
+  margin-top: 20px;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  max-width: 1000px; /* Control width for readability */
+  max-width: 1000px;
   margin-left: auto;
-  margin-right: auto; /* Centering */
-  border-radius: 10px;
+  margin-right: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
 }
 
-.participant-avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid white;
-  margin: 0 5px;
+.event-description p {
+  margin-bottom: 20px;
 }
 
 /* Additional styles for the map */
@@ -88,4 +308,518 @@ html, body {
   height: auto;
   margin-top: 20px;
   border-radius: 10px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Purchase section container */
+.purchase-section-EventDetail {
+  background-color: #2a2b69; /* Dark blue background color */
+  color: white; /* White text color */
+  text-align: center; /* Center-align text within the section */
+  margin-top: 70px; 
+  max-width: 1700%;
+  height: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0; /* Prevent the container from shrinking */
+}
+
+/* Title of the purchase section */
+.purchase-title-EventDetail {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Font size of the title */
+  margin-bottom: 50px; /* Space below the title */
+  margin-top: 20px; /* Add margin-top to move the title down */
+ padding-top: 30px;
+  
+}
+
+/* Container for the card elements */
+.purchase-cards-EventDetail {
+  display: flex; /* Use flexbox to arrange cards */
+  justify-content: center; /* Center the cards horizontally */
+  margin-top: 59px; /* Space above the button container */
+  gap: 20px; /* Space between each card */
+  width: 100%;
+}
+
+/* Individual card styling */
+.purchase-card-EventDetail {
+  background-color: #242565; /* Same dark blue background color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  width: 300px; /* Fixed width for each card */
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow effects */
+}
+
+/* Hover effect for cards */
+.purchase-card-EventDetail:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Lift and tilt the card on hover */
+  box-shadow: 0px 20px 60px 0px rgba(61, 55, 241, 0.35); /* Enhanced shadow on hover for more depth */
+}
+
+/* Icon styling inside each card */
+.icon-EventDetail {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Large font size for icons */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+/* Styles for the card titles */
+.purchase-card-EventDetail h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem; /* Font size for card titles */
+  margin: 10px 0; /* Space above and below the title */
+}
+
+/* Styles for the card text */
+.purchase-card-EventDetail p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Font size for the paragraph text */
+  line-height: 1.5; /* Line height for better readability */
+}
+
+/* Container for the buttons below the cards */
+.purchase-buttons-EventDetail {
+  display: flex; /* Use flexbox to arrange buttons */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin-top:50px; /* Space above the button container */
+}
+
+/* General styles for buttons */
+.purchase-button-EventDetail {
+  padding: 10px 20px; /* Padding inside the button */
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Font size for the button text */
+  background-color: transparent; /* Transparent background */
+  color: white;
+  border: 1.5px solid white;
+  border-radius: 50px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* Additional styles for the primary button */
+.purchase-button.primary-EventDetail {
+  background-color: #F5167E; /* Pink background color */
+  border: none; /* No border */
+  box-shadow: 0px 10px 50px rgba(61, 55, 241, 0.25); /* Shadow for depth */
+  padding: 13px 42px; /* Padding inside the button */
+}
+
+/* Hover effect for all buttons */
+.purchase-button-EventDetail:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #242565; /* Dark blue text color on hover */
+}
+
+/* Related section styles */
+.related-section-EventDetail {
+  background-color: #ffffff; /* Light gray background color */
+  padding: 50px 20px; /* Padding around the section */
+  text-align: center; /* Center-align text within the section */
+}
+
+/* Title of the related section */
+.related-title-EventDetail {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Font size of the title */
+  color: #242565; /* Dark blue color */
+  margin-bottom: 30px; /* Space below the title */
+  margin-right: 38%;
+}
+
+/* Container for the related cards */
+.related-cards-EventDetail {
+  display: flex; /* Use flexbox to arrange cards */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between each card */
+}
+
+/* Individual related card styling */
+.related-card-EventDetail {
+  background-color: white; /* White background color for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure child elements are clipped to the border radius */
+  width: 300px; /* Fixed width for each card */
+  text-align: left; /* Left-align text within the card */
+}
+
+/* Image inside the related card */
+.related-card-image-EventDetail {
+  width: 100%; /* Full width for the image */
+  height: 180px; /* Fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Container for the card info */
+.related-card-info-EventDetail {
+  padding: 15px; /* Padding inside the card */
+  display: flex; /* Use flexbox to arrange content and date */
+  justify-content: space-between; /* Space between content and date */
+}
+
+/* Container for the date section */
+.related-card-date-EventDetail {
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack month and day vertically */
+  align-items: center; /* Center-align month and day */
+}
+
+/* Styling for the month text */
+.related-card-month-EventDetail {
+  font-family: 'Inter', sans-serif;
+  line-height: normal;
+  color: #3D37F1;
+  text-align: center;
+  font-size: 11.372px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Styling for the day text */
+.related-card-day-EventDetail {
+  font-family: 'Inter', sans-serif;
+  font-size: 28.429px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000; /* Black color for the day */
+}
+
+/* Container for the card content (title and description) */
+.related-card-content-EventDetail {
+  display: flex;
+  flex-direction: column; /* Stack title and description vertically */
+  margin-top: -20px;
+}
+
+/* Styling for the card title */
+.related-card-title-EventDetail {
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  margin-bottom: -5px; /* Reduced space below the card title */
+  margin-left: 10%;
+  
+}
+
+/* Styling for the card description */
+.related-card-description-EventDetail {
+  font-family: 'Inter', sans-serif;
+  color: #6A6A6A;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  margin-left: 10%;
+}
+
+/* Pagination dots container */
+.related-pagination-EventDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Space above the pagination */
+}
+
+/* Individual pagination dot styling */
+.related-pagination-EventDetail .dot {
+  height: 10px; /* Height of the dot */
+  width: 10px; /* Width of the dot */
+  margin: 0 5px; /* Space between dots */
+  border-radius: 50%; /* Make the dots round */
+  display: inline-block;
+}
+
+/* Color specific pagination dots */
+.related-pagination-EventDetail .dot:nth-child(1) {
+  background-color: #242565; /* Dark blue */
+}
+
+.related-pagination-EventDetail .dot:nth-child(2) {
+  background-color: #3A3B74; /* Gray */
+}
+
+.related-pagination-EventDetail .dot:nth-child(3) {
+  background-color: #3A3B7433; /* Light gray */
+}
+
+.wallet-section-EventDetail {
+  display: flex; /* Enables flexbox layout for the container */
+  align-items: center; /* Centers items vertically within the container */
+  justify-content: center; /* Centers items horizontally within the container */
+  background-color: #EEE1FF;; /* Light purple background color */
+  padding: 50px 20px; /* Adds padding of 50px on the top and bottom, and 20px on the left and right */
+  text-align: center; /* Centers the text within the container */
+  margin: 50px auto; /* Adds a top margin of 50px and centers the container */
+  max-width: 1000px; /* Sets the maximum width of the container */
+  max-height: 100px; /* Sets the maximum height of the container to 500px */
+
+}
+
+
+.wallet-image-EventDetail {
+  max-width: 400px; /* Set a max width for the wallet image */
+  margin-right: 30px;
+}
+
+.wallet-content-EventDetail {
+  text-align: left; /* Align text to the left */
+}
+
+.wallet-content-EventDetail h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Font size for the title */
+  margin-bottom: 10px;
+}
+
+.wallet-content-EventDetail p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Font size for the paragraph */
+  margin-bottom: 20px;
+}
+
+.wallet-button {
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background-color: #f5167e; /* Button background color */
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wallet-button:hover {
+  background-color: #d6146e; /* Button hover color */
+}
+
+/* Category section styles */
+.category-section-EventDetail {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff; /* White background color */
+ 
+}
+
+.category-title-EventDetail {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem; /* Font size for the title */
+  color: #242565; /* Dark blue color for the title */
+  margin-bottom: 30px; /* Space below the title */
+  margin-left: -750px;
+}
+
+/* Category cards container */
+.category-cards-EventDetail {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  margin-bottom: 90px;
+}
+
+/* Individual category card styling */
+.category-card-EventDetail {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 250px; /* Fixed width for each card */
+  text-align: center;
+  position: relative; /* Required for positioning the label */
+}
+
+/* Image inside the category card */
+.category-card-image-EventDetail {
+  width: 100%; /* Set width to 100% to fit within the card */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 10px 0 0; /* Rounded top corners */
+  position: relative; /* Set position relative for layering */
+  z-index: 1; /* Lower z-index to place image below label */
+}
+
+/* Label for the category card */
+.category-card-label-EventDetail {
+  position: absolute; /* Position the label absolutely relative to the nearest positioned ancestor */
+  top: 180px; /* Position it 176px from the top of the nearest positioned ancestor */
+  left: 50%; /* Position it in the center horizontally relative to the nearest positioned ancestor */
+  transform: translateX(-50%); /* Center the label horizontally by shifting it left 50% of its own width */
+  display: flex; /* Use flexbox layout for the label */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  width: 179.266px; /* Set a fixed width for the label */
+  height: 27.818px; /* Set a fixed height for the label */
+  padding: 6px 55px; /* Add padding of 6px top and bottom, 55px left and right, for the oval shape */
+  font-family: 'Inter', sans-serif; /* Set the font family to 'Inter', sans-serif as fallback */
+  font-size: 16px; /* Set the font size to 16px */
+  color: #FFF; /* Set the text color to white */
+  background-color: #242565; /* Set the background color to dark blue */
+  border: 4px solid #04092C; /* Set the border to 4px solid dark color */
+  border-color: #FFF; /* Set the border color to white */
+  border-radius: 50px; /* Make the label oval by setting a large border-radius */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  z-index: 2; /* Higher z-index to place label above image */
+}
+
+/* Footer section styles */
+.footer-EventDetail {
+  background-color: #0A075F; /* Set background color to dark blue */
+  color: white; /* Set text color to white */
+  padding: 40px 20px; /* Add padding around the section */
+  text-align: left; /* Align text to the left */
+}
+
+.footer-container-EventDetail {
+  display: flex; /* Use flexbox to arrange columns */
+  flex-wrap: wrap; /* Allow columns to wrap */
+  justify-content: space-between; /* Space between columns */
+  max-width: 1200px; /* Set maximum width for the footer container */
+  margin: 0 auto; /* Center the footer container */
+}
+
+.footer-column-EventDetail {
+  flex: 1; /* Allow columns to grow and shrink equally */
+  min-width: 250px; /* Minimum width for each column */
+  margin: 20px 20px 0 0; /* Add vertical space between columns */
+}
+
+/* Specific columns with additional top margin */
+.logo-column {
+  margin-top: 40px; /* Adjust the top margin to move the column lower */
+}
+
+.eventi-column {
+  margin-top: 90px; /* Adjust the top margin to move the column lower */
+  margin-right: -100px;
+  
+}
+
+.utility-column {
+  margin-top: 90px; /* Adjust the top margin to move the column lower */
+  margin-right: -100px;
+}
+
+.subscribe-column {
+  margin-top: 90px; /* Adjust the top margin to move the column lower */
+}
+
+.footer-logo-EventDetail {
+  width: 190px; /* Set fixed width for the logo */
+  margin-bottom: 20px; /* Add space below the logo */
+}
+
+.footer-social-EventDetail {
+  display: flex; /* Use flexbox for the social icons */
+  gap: 10px; /* Space between social icons */
+  margin-top: 20px; /* Space above the social icons */
+}
+
+.footer-social-EventDetail img {
+  width: 30px; /* Fixed width for social icons */
+  height: auto; /* Auto height to maintain aspect ratio */
+}
+
+.footer-column-EventDetail h3 {
+  font-family: 'Inter', sans-serif; /* Set font family */
+  font-size: 1rem; /* Set font size for the column titles */
+  margin-bottom: 10px; /* Add space below the column titles */
+}
+
+.footer-column-EventDetail ul {
+  list-style: none; /* Remove list styling */
+  padding: 0; /* Remove padding */
+}
+
+.footer-column-EventDetail li {
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+.footer-column-EventDetail a {
+  color: white; /* Set text color to white */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Add smooth transition for color */
+}
+
+/* Subscribe section styles */
+.footer-subscribe-EventDetail {
+  display: flex; /* Use flexbox to arrange input and button */
+  align-items: center; /* Center align items vertically */
+  gap: 10px; /* Space between input and button */
+  margin-top: 25px; /* Add space above the subscribe section */
+  background-color: #FFF; /* Set background color to white */
+  border-radius: 40px; /* Add rounded corners */
+  border: 2px solid #F1F1F1; /* Add border */
+  padding: 5px; /* Add padding inside the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  max-width: 400px; /* Set maximum width for the subscribe container */
+}
+
+.footer-subscribe-EventDetail input {
+  padding: 10px 15px; /* Add padding inside the input */
+  border-radius: 30px; /* Add rounded corners */
+  border: none; /* Remove border */
+  flex: 1; /* Allow input to grow */
+  font-family: 'Inter', sans-serif; /* Set font family */
+  font-size: 14px; /* Set font size for the input */
+  outline: none; /* Remove outline on focus */
+}
+
+.footer-subscribe-EventDetail button {
+  height: 40px; /* Set height for the button */
+  padding: 0 20px; /* Add padding inside the button */
+  background-color: #F5167E; /* Set background color to pink */
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25); /* Add shadow for depth */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-family: 'Inter', sans-serif; /* Set font family */
+  font-size: 14px; /* Set font size */
+  font-style: normal; /* Set font style */
+  font-weight: 500; /* Set font weight */
+  margin-left: -30px; /* Adjust position to sit inside the oval properly */
+  z-index: 1; /* Ensure button is on top layer */
+}
+
+.footer-subscribe-EventDetail button:hover {
+  background-color: #e60073; /* Change background color on hover */
+}
+
+/* Bottom section styles */
+.footer-bottom-EventDetail {
+  text-align: center; /* Center-align text */
+  margin-top: 30px; /* Add space above the bottom section */
+  font-family: 'Inter', sans-serif; /* Set font family */
+  font-size: 0.875rem; /* Set font size for the bottom text */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add top border */
+  padding-top: 20px; /* Add padding to the top */
+}
+
+/* Additional styles for the paragraph text in the footer */
+.footer-column-EventDetail p {
+  color: #F3F3F3;
+  font-family: 'Inter', sans-serif; /* Set font family */
+  font-size: 14px; /* Adjust the font size */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  margin-bottom: 20px; /* Add space below the paragraph */
+  text-align: justify; /* Justify the text for a cleaner look */
+  max-width: 600px; /* Set maximum width to prevent it from stretching too wide */
+  margin-right: 80px;
 }
