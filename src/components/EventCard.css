@@ -1,5 +1,12 @@
 /* EventCard.css */
 
+
+.event-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+}
+
 .event-card {
   position: relative;
   border: 1px solid #ddd;
@@ -9,6 +16,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
+
 
 .event-card-image {
   width: 100%;
@@ -56,30 +64,29 @@
   line-height: 150%;
   color: #000;
   margin-top: -45px;
+  margin-left: 70px;
 }
 
 .event-card-description {
   font-size: 0.8rem;
   color: #6A6A6A;
   margin-top: 5px;
+  margin-left: 70px;
  
 }
 
 .event-card-icons {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.event-card-icon {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin-left: 5px;
+  align-items: center;
+  width: 85.543px;
+  height: 38.51px;
+  gap: 8px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 130px;
+  right: 10px;
+  
 }
 
 .event-card-icon.heart {

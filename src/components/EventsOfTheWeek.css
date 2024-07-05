@@ -1,28 +1,46 @@
+:root {
+  --primary-color: #3D37F1;
+  --secondary-color: #3A3B74;
+  --base-font-family: 'Inter', sans-serif;
+}
+
 /* Wrapper for the entire events section */
-.events-wrapper {
+.events-week-wrapper {
   font-size: 1rem;
-  padding-left: 55px;
-  padding: 80px 20px;
+  padding: 80px 20px 80px 55px;
   color: #242565;
-  position: relative; /* Ensure relative positioning for the title */
+  position: relative;
 }
 
 /* Title styling */
-.events-title {
-  font-family: 'Inter', sans-serif;
+.events-week-title {
+  font-family: var(--base-font-family);
   font-size: 30px;
-  padding: 50px 10px;
+  padding: 45px 10px;
   position: absolute;
-  font-style: normal;
- font-weight: 700;
- line-height: normal;
-  top: 0; /* Adjust as needed */
-  left: 90px; /* Adjust as needed */
+  font-weight: 700;
+  top: -20px;
+  left: 100px;
   z-index: 10;
+  color: #242565;
 }
 
+/* Adding the line under the title */
+.events-week-title::after {
+  content: '';
+  position: absolute;
+  bottom: 30px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 990px;
+  background-color: #ddd; /* Line color */
+  margin-top: 20px; /* Space between the title and the line */
+}
+
+
 /* Carousel container to align and position buttons */
-.events-carousel {
+.events-week-carousel {
   position: relative;
   display: flex;
   align-items: center;
@@ -30,8 +48,8 @@
 }
 
 /* Styling for carousel buttons */
-.carousel-button {
-  color: #3D37F1; /* Change color of the vector */
+.carousel-week-button {
+  color: var(--primary-color);
   background-color: transparent;
   border: none;
   font-size: 2rem;
@@ -41,109 +59,144 @@
   transform: translateY(-50%);
 }
 
-.carousel-button.left {
-  left: 0; /* Move closer to the left border */
+.carousel-week-button.left {
+  left: 0;
 }
 
-.carousel-button.right {
-  right: 0; /* Move closer to the right border */
+.carousel-week-button.right {
+  right: 0;
 }
 
 /* Container for the list of event cards */
-.events-list {
+.events-week-list {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 20px 0;
+  justify-content: center;
   scroll-behavior: smooth;
 }
 
 /* Individual event card styling */
-.event-card {
+.event-week-card {
   position: relative;
-  width: 330px;
-  height: 85;
-  
+  width: 300px;
+  height: 300px;
   border: 1px solid #ddd;
   border-radius: 20px;
   overflow: hidden;
   margin: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the event card link */
+.event-week-card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Styling for event card images */
-.event-card img {
+.event-week-card .event-week-image {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
 }
 
 /* Container for the event card content */
-.event-card-content {
+.event-week-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Container for the event card details and date */
+.event-week-card-details-wrapper {
   display: flex;
   align-items: flex-start;
-  padding-top: 5px; /* Adjust the padding to move content upward */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* Date section within event card */
-.event-card-date {
+.event-week-card-date {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
-  color: #3D37F1;
+  color: var(--primary-color);
   margin-right: 10px;
   width: 50px;
 }
 
-/* Day part of the date */
-.event-card-day {
-  font-size: 1.2rem; /* Adjust the size of the day */
+.event-week-card-day {
+  font-size: 1.2rem;
   font-weight: bold;
   color: #000;
 }
 
-/* Month part of the date */
-.event-card-month {
+.event-week-card-month {
   margin-top: 5px;
-  font-size: 1rem; /* Adjust the size of the month */
+  font-size: 1rem;
   color: #3D37F1;
+  text-transform: uppercase;
 }
 
 /* Details section within event card */
-.event-card-details {
-  text-align: right ;
-  flex: 1;
+.event-week-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 60px);
 }
 
-/* Title of the event */
-.event-card-title {
-  text-align: left ;
-  font-family: 'Inter', sans-serif;
+.event-week-card-title {
+  text-align: left;
+  font-family: var(--base-font-family);
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 24px */
-  width: 246.201px;
-  height: 10px;
+  line-height: 1.5;
   color: #000;
-  margin-left: 60px;
-  margin-top: -45px; /* Move the title upward */
+  margin: 0;
 }
 
-/* Description of the event */
-.event-card-description {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
+.event-week-card-description {
+  font-family: var(--base-font-family);
   color: #6A6A6A;
-  text-align: left ;
-  margin: 10px 0 0 60px; /* Adjust margin to start slightly to the right */
-  
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 5px;
+  width: 100%;
+}
+
+/* Container for social icons */
+.social-week-icons-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Links for social icons */
+.social-week-icons a {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Social icon images */
+.social-week-icons img {
+  width: 30px;
+  height: 30px;
 }
 
 /* Container for the icons within event card */
-.event-card-icons {
+.event-week-card-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,13 +205,12 @@
   gap: 8px;
   flex-shrink: 0;
   position: absolute;
-  top: 120px; /* Lower the icons */
+  top: 145px;
   right: 5px;
 }
 
-
 /* Styling for carousel indicators */
-.carousel-indicators {
+.carousel-week-indicators {
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -173,20 +225,18 @@
   cursor: pointer;
 }
 
-/* Styling each dot with separate colors */
 .indicator:nth-child(1) {
-  background-color: #3A3B74; 
+  background-color: var(--secondary-color);
 }
 
 .indicator:nth-child(2) {
-  background-color: #3A3B7494; 
+  background-color: rgba(58, 59, 116, 0.58);
 }
 
 .indicator:nth-child(3) {
-  background-color: #3A3B7433; 
+  background-color: rgba(58, 59, 116, 0.2);
 }
 
-/* Active state for carousel indicators */
 .indicator.active {
   background-color: #333;
 }

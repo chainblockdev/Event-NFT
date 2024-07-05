@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import FooterSection from './FooterSection';
 import logo from './Logo.png';
 import locationIcon from '../assets/icons/location-icon.png';
 import dateIcon from '../assets/icons/date-icon.png';
@@ -21,10 +22,7 @@ import categoryImage1 from '../assets/category/Concert.png';
 import categoryImage2 from '../assets/category/Sports.png';
 import categoryImage3 from '../assets/category/art.png';
 import categoryImage4 from '../assets/category/Family.png';
-import facebookIcon from '../assets/icons/Facebook Icon.png'; // Added
-import instagramIcon from '../assets/icons/Instagram Icon.png'; // Added
-import linkedinIcon from '../assets/icons/Linkedin Icon.png'; // Added
-import './EventDetail.css';
+import './MateraEvents.css';
 
 const events = [
   {
@@ -117,7 +115,7 @@ const categories = [
   // Add more categories as needed
 ];
 
-const EventDetail = () => {
+const MateraEvents = () => {
   const { id } = useParams();
   const event = events[id] || events[0]; // Fallback to the first event if no specific event is found
 
@@ -133,7 +131,7 @@ const EventDetail = () => {
             <img src={logo} alt="EventiNFT Logo" className="logo-imgEventDetail" />
           </div>
           <div className="nav-linksEventDetail">
-            <a className="nav-linkEventDetail" href="#eventi">Eventi</a>
+            <a className="nav-linkEventDetail" href="/upcomingevents">Eventi</a> {/* Updated */}
             <a className="nav-linkEventDetail" href="#acquista">Acquista</a>
             <a className="nav-linkEventDetail" href="#ticket">Ticket</a>
             <a className="nav-linkEventDetail" href="#contatti">Contatti</a>
@@ -173,7 +171,7 @@ const EventDetail = () => {
       <div className="price-label">Prezzo</div>
       <div className="event-price">{event.price}</div>
     </div>
-    <button className="event-purchase-EventDetail-button">Acquista</button>
+    <button className="event-purchase-MateraEvents-button">Acquista</button>
   </div>
 </div>
       <div className="event-description">
@@ -186,122 +184,77 @@ const EventDetail = () => {
         <p>Donec molestie iaculis lectus, nec pharetra ante laoreet eget. Maecenas congue viverra leo vulputate varius. Suspendisse vitae tempor libero, nec accumsan erat. In sed nisi laoreet, dignissim sapien eu, auctor dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse efficitur enim arcu, vel consectetur risus volutpat ac. Sed scelerisque interdum sodales.</p>
       </div>
       <img src={mapImage} alt="Map" className="event-map" />
-      <div className="purchase-section-EventDetail">
-        <h2 className="purchase-title-EventDetail">Acquista il tuo biglietto in 3 click</h2>
-        <div className="purchase-cards-EventDetail">
-          <div className="purchase-card-EventDetail">
-            <img src={icon1} alt="Star Icon" className="icon-EventDetail" />
+      <div className="purchase-section-MateraEvents">
+        <h2 className="purchase-title-MateraEvents">Acquista il tuo biglietto in 3 click</h2>
+        <div className="purchase-cards-MateraEvents">
+          <div className="purchase-card-MateraEvents">
+            <img src={icon1} alt="Star Icon" className="icon-MateraEvents" />
             <h3>Scegli l'evento a cui partecipare</h3>
             <p>Grazie alla tecnologia NFT (Non-Fungible Token), puoi acquistare biglietti unici e collezionabili per una vasta gamma di eventi culturali, concerti, spettacoli e molto altro.</p>
           </div>
-          <div className="purchase-card-EventDetail">
-            <img src={icon2} alt="Wallet Icon" className="icon-EventDetail" />
+          <div className="purchase-card-MateraEvents">
+            <img src={icon2} alt="Wallet Icon" className="icon-MateraEvents" />
             <h3>Crea e connetti il tuo wallet</h3>
             <p>Grazie alla tecnologia NFT (Non-Fungible Token), puoi acquistare biglietti unici e collezionabili per una vasta gamma di eventi culturali, concerti, spettacoli e molto altro.</p>
           </div>
-          <div className="purchase-card-EventDetail">
-            <img src={icon3} alt="Ticket Icon" className="icon-EventDetail" />
+          <div className="purchase-card-MateraEvents">
+            <img src={icon3} alt="Ticket Icon" className="icon-MateraEvents" />
             <h3>Ottieni il tuo ticket NFT</h3>
             <p>Grazie alla tecnologia NFT (Non-Fungible Token), puoi acquistare biglietti unici e collezionabili per una vasta gamma di eventi culturali, concerti, spettacoli e molto altro.</p>
           </div>
         </div>
-        <div className="purchase-buttons-EventDetail">
-          <button className="purchase-button primary-EventDetail">Acquista</button>
-          <button className="purchase-button-EventDetail">Connetti wallet</button>
+        <div className="purchase-buttons-MateraEvents">
+          <button className="purchase-button primary-MateraEvents">Acquista</button>
+          <button className="purchase-button-MateraEvents">Connetti wallet</button>
         </div>
       </div>
-      <div className="related-section-EventDetail">
-        <h2 className="related-title-EventDetail">Potrebbero interessarti anche...</h2>
-        <div className="related-cards-EventDetail">
+      <div className="related-section-MateraEvents">
+        <h2 className="related-title-MateraEvents">Potrebbero interessarti anche...</h2>
+        <div className="related-cards-MateraEvents">
           {relatedEvents.map((relatedEvent, index) => (
-            <div key={index} className="related-card-EventDetail">
-              <img src={relatedEvent.image} alt={relatedEvent.title} className="related-card-image-EventDetail" />
-              <div className="related-card-info-EventDetail">
-                <div className="related-card-date-EventDetail">
-                  <span className="related-card-month-EventDetail">{relatedEvent.date.split(' ')[0].toUpperCase()}</span>
-                  <span className="related-card-day-EventDetail">{relatedEvent.date.split(' ')[1]}</span>
+            <div key={index} className="related-card-MateraEvents">
+              <img src={relatedEvent.image} alt={relatedEvent.title} className="related-card-image-MateraEvents" />
+              <div className="related-card-info-MateraEvents">
+                <div className="related-card-date-MateraEvents">
+                  <span className="related-card-month-MateraEvents">{relatedEvent.date.split(' ')[0].toUpperCase()}</span>
+                  <span className="related-card-day-MateraEvents">{relatedEvent.date.split(' ')[1]}</span>
                 </div>
-                <div className="related-card-content-EventDetail">
-                  <h3 className="related-card-title-EventDetail">{relatedEvent.title}</h3>
-                  <p className="related-card-description-EventDetail">{relatedEvent.description}</p>
+                <div className="related-card-content-MateraEvents">
+                  <h3 className="related-card-title-MateraEvents">{relatedEvent.title}</h3>
+                  <p className="related-card-description-MateraEvents">{relatedEvent.description}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="related-pagination-EventDetail">
+        <div className="related-pagination-MateraEvents">
           <span className="dot"></span>
           <span className="dot"></span>
           <span className="dot"></span>
         </div>
       </div>
-      <div className="wallet-section-EventDetail">
-        <img src={walletImage} alt="Wallet" className="wallet-image-EventDetail" />
-        <div className="wallet-content-EventDetail">
+      <div className="wallet-section-MateraEvents">
+        <img src={walletImage} alt="Wallet" className="wallet-image-MateraEvents" />
+        <div className="wallet-content-MateraEvents">
           <h2>Non hai ancora un Wallet?</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <button className="wallet-button">Crea Wallet</button>
         </div>
       </div>
-      <div className="category-section-EventDetail">
-        <h2 className="category-title-EventDetail">Cerca Per Categoria</h2>
-        <div className="category-cards-EventDetail">
+      <div className="category-section-MateraEvents">
+        <h2 className="category-title-MateraEvents">Cerca Per Categoria</h2>
+        <div className="category-cards-MateraEvents">
           {categories.map((category, index) => (
-            <div key={index} className="category-card-EventDetail">
-              <img src={category.image} alt={category.title} className="category-card-image-EventDetail" />
-              <div className="category-card-label-EventDetail">{category.title}</div>
+            <div key={index} className="category-card-MateraEvents">
+              <img src={category.image} alt={category.title} className="category-card-image-MateraEvents" />
+              <div className="category-card-label-MateraEvents">{category.title}</div>
             </div>
           ))}
         </div>
       </div>
-      <footer className="footer-EventDetail">
-  <div className="footer-container-EventDetail">
-    <div className="footer-column-EventDetail logo-column">
-      <img src={logo} alt="EventiNFT Logo" className="footer-logo-EventDetail" />
-      <p>
-        EventiNFT Matera consente l'acquisto di biglietti per eventi culturali tramite tecnologia blockchain, garantendo autenticità e sicurezza. Ogni biglietto diventa un oggetto da collezione digitale, offrendo esperienze esclusive e personalizzate.
-      </p>
-      <div className="footer-social-EventDetail">
-        <a href="#"><img src={facebookIcon} alt="Facebook" /></a>
-        <a href="#"><img src={instagramIcon} alt="Instagram" /></a>
-        <a href="#"><img src={linkedinIcon} alt="LinkedIn" /></a>
-      </div>
-    </div>
-    <div className="footer-column-EventDetail eventi-column">
-      <h3>EventiNFT</h3>
-      <ul>
-        <li><a href="#">Eventi</a></li>
-        <li><a href="#">Acquista</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="#">Wallet</a></li>
-      </ul>
-    </div>
-    <div className="footer-column-EventDetail utility-column">
-      <h3>Utility</h3>
-      <ul>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Contattaci</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-      </ul>
-    </div>
-    <div className="footer-column-EventDetail subscribe-column">
-      <h3>Stay In The Loop</h3>
-      <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
-      <div className="footer-subscribe-EventDetail">
-        <input type="email" placeholder="Enter your email address..." />
-        <button>Iscriviti ora</button>
-      </div>
-    </div>
-  </div>
-  <div className="footer-bottom-EventDetail">
-    Copyright © 2024 More. Web Design
-  </div>
-</footer>
-
-
+      <FooterSection />
     </>
   );
 };
 
-export default EventDetail;
+export default MateraEvents;

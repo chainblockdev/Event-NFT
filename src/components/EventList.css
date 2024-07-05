@@ -5,10 +5,9 @@
 
 .section-header {
   display: flex;
-  justify-content: flex-start; /* Left-align the content horizontally */
+  justify-content: space-between; /* Distribute space evenly between title and buttons */
   align-items: center; /* Vertically center the items */
   margin-bottom: 30px; /* Space between the title and event cards */
-  gap: 410px; /* Space between the title and buttons */
   padding: 10px 40px; /* Adjusted size to match the design */
   position: relative; /* For positioning the line */
 }
@@ -17,7 +16,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
   color: #242565;
   margin: 0;
@@ -72,11 +71,14 @@
 }
 
 .event-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center; /* Center the event cards */
-  gap: 20px;
+  gap: 0px;
 }
+
 
 .load-more-button {
   width: 182px;

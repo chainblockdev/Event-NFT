@@ -5,21 +5,21 @@ const blogs = [
   {
     image: process.env.PUBLIC_URL + '/blog1.jpg',
     title: '6 Strategies to Find Your Conference Keynote and Other Speakers',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.',
     date: '12 Mar',
     author: 'John Doe'
   },
   {
     image: process.env.PUBLIC_URL + '/blog2.jpg',
     title: 'How Successfully Used Paid Marketing to Drive Incremental Ticket Sales',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.',
     date: '12 Mar',
     author: 'John Doe'
   },
   {
     image: process.env.PUBLIC_URL + '/blog3.jpg',
     title: 'Introducing Workspaces: Work smarter, not harder with new navigation',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.',
     date: '12 Mar',
     author: 'John Doe'
   },

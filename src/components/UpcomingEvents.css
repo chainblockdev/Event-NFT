@@ -60,10 +60,12 @@
     font-weight: 500;
     line-height: normal;
     background-color: transparent;
-    color: white;
-    border: 2px solid #FFF;
-    border-radius: 50px; /* Makes the button oval-shaped */
+    color: #FFF;
+    border-radius: 50px;
+    border: 1.5px solid #FFF;
     cursor: pointer;
+    flex-shrink: 0;
+    height: 45px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -777,6 +779,23 @@
     position: relative;
 }
 
+/* Apply styles to all link elements within event cards */
+.event-cardUpcomingEvents, .upcoming-event-cardUpcomingEvents {
+    text-decoration: none; /* Remove underline from the entire card */
+    color: inherit; /* Ensure the text color remains unchanged */
+  }
+  
+  .event-cardUpcomingEvents .event-card-textUpcomingEvents a,
+  .event-cardUpcomingEvents .event-card-titleUpcomingEvents a,
+  .event-cardUpcomingEvents .event-card-descriptionUpcomingEvents a,
+  .event-cardUpcomingEvents .event-card-dateUpcomingEvents span a,
+  .upcoming-event-cardUpcomingEvents .upcoming-event-card-titleUpcomingEvents a,
+  .upcoming-event-cardUpcomingEvents .upcoming-event-card-descriptionUpcomingEvents a,
+  .upcoming-event-cardUpcomingEvents .upcoming-event-card-dateUpcomingEvents span a {
+    text-decoration: none; /* Remove underline from the text inside the card */
+    color: inherit; /* Ensure the text color remains unchanged */
+  }
+  
 /* Upcoming event cards container styling */
 .upcoming-event-cardsUpcomingEvents {
     display: flex;
@@ -907,8 +926,6 @@
 }
 
 
-
-
 /* Show more button styling */
 .upcoming-events-show-moreUpcomingEvents {
     margin-top: 20px;
@@ -929,217 +946,6 @@
 
 /* Show more button hover effect */
 .upcoming-events-show-moreUpcomingEvents:hover {
-    background-color: #ff4d94;
+    background-color: #4946a3;
 }
 
-/* Footer styling */
-.footerUpcomingEvents {
-    background-color:#0A075F;
-    color: #F3F3F3;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 160%; /* 22.4px */
-    padding: 40px 20px;
-    text-align: left;
-}
-
-/* Footer content container styling */
-.footer-contentUpcomingEvents {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Footer logo section styling */
-.footer-logo-sectionUpcomingEvents {
-    flex: 1;
-    max-width: 300px;
-}
-
-/* Footer logo image styling */
-.footer-logoUpcomingEvents {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-/* Footer social icons container styling */
-.footer-social-iconsUpcomingEvents a {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-/* Footer links section styling */
-.footer-links-sectionUpcomingEvents {
-    flex: 1;
-    font-family: 'Inter', sans-serif;
-    max-width: 200px;
-   margin-top: 60px;
-}
-
-/* Footer links section heading styling */
-.footer-links-sectionUpcomingEvents h3 {
-    margin-bottom: 10px;
-}
-
-/* Footer links list styling */
-.footer-links-sectionUpcomingEvents ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Footer links list item styling */
-.footer-links-sectionUpcomingEvents ul li {
-    margin-bottom: 5px;
-}
-
-/* Footer links anchor tag styling */
-.footer-links-sectionUpcomingEvents ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-/* Footer links anchor tag hover effect */
-.footer-links-sectionUpcomingEvents ul li a:hover {
-    color: #FF007A;
-}
-
-/* Footer newsletter section styling */
-.footer-newsletter-sectionUpcomingEvents {
-    flex: 2;
-    font-family: 'Inter', sans-serif;
-    max-width: 300px;
-    margin-top: 60px;
-  
-}
-
-/* Footer newsletter section heading styling */
-.footer-newsletter-sectionUpcomingEvents h3 {
-    margin-bottom: 10px;
-    margin-left: -30px;
-}
-
-/* Footer newsletter section paragraph styling */
-.footer-newsletter-sectionUpcomingEvents p {
-    margin-bottom: 20px;
-    margin-left: -30px;
-}
-
-/* Footer newsletter form styling */
-.footer-newsletter-sectionUpcomingEvents form {
-    display: flex;
-}
-
-/* Container for the newsletter section */
-.footer-newsletter-sectionUpcomingEvents form {
-    display: flex; /* Use flexbox to arrange input and button */
-    align-items: center; /* Center align items vertically */
-    width: 330px;
-    height: 60px;
-    padding: 5px; /* Add padding inside the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-    overflow: hidden; /* Ensure child elements do not overflow the container */
-    border-radius: 50px; /* Add rounded corners */
-    background-color: #FFF; /* Set background color to white */
-    border: 2px solid #F1F1F1; /* Add border */
-    margin-left: -40px;
-}
-
-/* Footer newsletter email input styling */
-.footer-newsletter-sectionUpcomingEvents input[type="email"] {
-    flex: 1; /* Allow the input to take up the remaining space */
-    padding: 10px 10px; /* Add padding inside the input */
-    border: none; /* Remove the default border */
-    border-radius: 45px 0 0 45px; /* Round the left corners of the input */
-    outline: none; /* Remove the default outline */
-    font-family: 'Inter', sans-serif;
-    border-right: none; /* Remove right border */
-    font-size:14px;
-}
-
-/* Footer newsletter button styling */
-.footer-newsletter-sectionUpcomingEvents button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px; /* Round the right corners of the button */
-    background-color: #FF007A;
-    font-family: 'Inter', sans-serif;
-    color: #FFFFFF;
-    cursor: pointer;
-    height: 60px;
-    transition: background-color 0.3s;
-    margin-left: -10px;
-    font-size:14px;
-}
-
-/* Footer newsletter button hover effect */
-.footer-newsletter-sectionUpcomingEvents button:hover {
-    background-color: #FF4D94;
-}
-
-
-/* Footer bottom section styling */
-.footer-bottomUpcomingEvents {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    font-size: 0.875rem;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .nav-barUpcomingEvents {
-        flex-direction: column;
-    }
-
-    .search-barUpcomingEvents {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .event-cardsUpcomingEvents {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .concert-cardsUpcomingEvents {
-        width: 100%;
-    }
-
-    .concert-cardUpcomingEvents {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .upcoming-event-cardUpcomingEvents {
-        width: 100%;
-    }
-
-    .footer-contentUpcomingEvents {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logo-sectionUpcomingEvents,
-    .footer-links-sectionUpcomingEvents,
-    .footer-newsletter-sectionUpcomingEvents {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .footer-newsletter-sectionUpcomingEvents form {
-        flex-direction: column;
-    }
-
-    .footer-newsletter-sectionUpcomingEvents input[type="email"] {
-        border-radius: 20px;
-        margin-bottom: 10px;
-    }
-
-    .footer-newsletter-sectionUpcomingEvents button {
-        border-radius: 20px;
-    }
-}

@@ -1,117 +1,165 @@
+/* The main container for the footer */
 .footer-wrapper {
-  background-color: #0A075F;
-  color: white;
-  padding: 40px 20px;
+  background-color: #0A075F; /* Background color of the footer */
+  color: #F3F3F3; /* Text color */
+  padding: 40px 20px; /* Padding around the footer content */
 }
 
+/* The container for the footer content */
 .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between; /* Space out columns evenly */
+  max-width: 1200px; /* Maximum width of the content */
+  margin: 0 auto; /* Center the content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
+/* Each column in the footer */
 .footer-column {
-  flex: 1;
-  min-width: 200px;
-  margin: 20px;
+  flex: 1; /* Allow columns to grow equally */
+  min-width: 200px; /* Minimum width for each column */
+  margin: 20px; /* Margin around each column */
 }
 
-.footer-column h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
+/* Paragraphs within the footer columns */
 .footer-column p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif; /* Font family */
+  margin-bottom: 20px; /* Space below the paragraph */
+  color: #F3F3F3; /* Text color */
+  font-size: 12px; /* Font size */
+  font-weight: 500; /* Font weight */
+  line-height: 150%; /* Line height */
+  text-align: left; /* Align text to the left */
+  margin-left: -10px;
 }
 
+/* Style for the logo image */
+.footer-logo {
+ 
+  margin-right: 100px; /* Space between the logo and text */
+  display: inline-block; /* Ensure it displays inline with text */
+  vertical-align: middle; /* Align vertically with text */
+}
+
+/* Unordered lists within the footer columns */
 .footer-column ul {
-  list-style: none;
-  padding: 0;
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
 }
 
+/* List items within the footer columns */
 .footer-column ul li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space below each list item */
 }
 
+/* Links within the list items */
 .footer-column ul li a {
-  color: white;
-  text-decoration: none;
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline from links */
 }
 
+/* Change link decoration on hover */
 .footer-column ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover */
 }
 
+/* Container for social icons */
+.social-icons {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-start; /* Move the social icons to the left */
+  margin-top: 10px; /* Space above the social icons */
+}
+
+/* Links for social icons */
 .social-icons a {
-  display: inline-block;
-  margin-right: 10px;
+  display: inline-block; /* Display as inline block */
+  margin-right: 10px; /* Space to the right of each icon */
 }
 
+/* Social icon images */
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 30px; /* Width of the icons */
+  height: 30px; /* Height of the icons */
 }
 
+/* Subscribe form container */
 .subscribe-form {
-  width: 290px;
-  height: 60.843px;
-  flex-shrink: 0;  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fff;
-  border-radius: 45.595px;
-  border: 2px solid #F1F1F1;
-  padding: 2px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  
+  width: 290px; /* Width of the form */
+  height: 60.843px; /* Height of the form */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out the input and button */
+  background-color: #fff; /* Background color */
+  border-radius: 45.595px; /* Rounded corners */
+  border: 2px solid #F1F1F1; /* Border color and width */
+  padding: 2px; /* Padding inside the form */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  margin-left: -20px;
 }
 
+/* Input field within the subscribe form */
 .subscribe-form input {
-  width: calc(100% - 80px);
-  height: 35px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: none;
-  background: #FFF;
-  outline: none;
-  color: #959595;
-  font-family: 'Inter', sans-serif;
-  font-size: 12.159px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  width: calc(100% - 100px); /* Adjusted width to fit with the button */
+  height: 35px; /* Height of the input field */
+  padding: 10px 20px; /* Padding inside the input field */
+  border-radius: 50px; /* Rounded corners */
+  border: none; /* No border */
+  background: #FFF; /* Background color */
+  outline: none; /* Remove outline */
+  color: #959595; /* Text color */
+  font-family: 'Inter', sans-serif; /* Font family */
+  font-size: 12.159px; /* Font size */
+  font-weight: 400; /* Font weight */
 }
 
+/* Button within the subscribe form */
 .subscribe-form button {
-  height: 50px;
-  padding: 0 20px;
-  background-color: #F5167E;
-  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 12.159px;
-  font-style: normal;
-  font-weight: 200;
-  margin-left: -90px; /* This ensures the button sits inside the oval properly */
-  z-index: 1;
+  height: 50px; /* Height of the button */
+  padding: 0 20px; /* Padding inside the button */
+  background-color: #F5167E; /* Background color */
+  box-shadow:0px 10px 50px 0px rgba(61, 55, 241, 0.25); /* Box shadow */
+  color: #FFFFFF; /* Text color */
+  border: none; /* No border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-family: 'Inter', sans-serif; /* Font family */
+  font-size: 12.159px; /* Font size */
+  font-weight: 200; /* Font weight */
+  margin-left: -80px; /* Adjusted margin to position inside the form */
+  z-index: 1; /* Position above other elements */
 }
 
+/* Container for the footer bottom section */
 .footer-bottom {
-  text-align: center;
-  margin-top: 40px;
+  text-align: center; /* Center text */
+  color: #4C4D8B;
+  margin-top: 40px; /* Space above the footer bottom section */
 }
 
+/* Paragraph in the footer bottom section */
 .footer-bottom p {
-  margin: 0;
-  font-size: 0.9rem;
+  margin: 0; /* Remove default margin */
+  color: #FEFEFE;
+  font-size: 0.9rem; /* Font size */
+}
+
+/* Line in the footer bottom section */
+.footer-line {
+  border: 0; /* Remove default border */
+  border-top: 1px solid white; /* Top border color and width */
+  margin: 10px 0; /* Margin above and below the line */
+}
+
+/* Specific styling for the "Stay In The Loop" section */
+.stay-in-the-loop-title {
+  font-size: 1rem; /* Title font size */
+  margin-bottom: 10px; /* Space below the title */
+  margin-left: -125px;
+}
+
+.stay-in-the-loop-description {
+
+  margin-bottom: 20px; /* Space below the description */
+  margin-left: 10px;
 }

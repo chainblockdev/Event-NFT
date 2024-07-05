@@ -3,6 +3,7 @@
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  /* Wrapper for the entire blog section, centering and adding padding */
 }
 
 .blog-wrapper h2 {
@@ -10,21 +11,22 @@
   font-size: 2.5rem;
   color: #242565;
   margin-bottom: 10px;
+  /* Styling for the main heading in the blog section */
 }
 
 .blog-wrapper p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
-  color: #666;
+ 
   margin-bottom: 30px;
+  /* Styling for the paragraphs in the blog section */
 }
 
 .blog-list {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Reduced gap between blog cards */
+  gap: 20px; /* Adjusted gap between blog cards for better spacing */
   padding: 20px 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  /* Flexbox container for blog cards, allowing wrapping and centered alignment */
 }
 
 .blog-card {
@@ -33,7 +35,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 10px; /* Reduced margin between blog cards */
+  margin: 10px; /* Adjusted margin for better spacing */
+  /* Individual blog card styling, ensuring a fixed maximum width */
 }
 
 .blog-image {
@@ -42,29 +45,44 @@
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px; /* Reduced space between the image and content */
+  margin-bottom: 10px;
+  /* Styling for the image inside the blog card, ensuring it fits well */
 }
 
 .blog-content {
   padding: 10px;
+  /* Padding for the content inside the blog card */
 }
 
 .blog-title {
   font-family: 'Inter', sans-serif;
+  color: #242565;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 30px */
   font-size: 1.2rem;
   margin: 0;
-  color: #333;
+  text-align: left;
+  /* Styling for the blog title inside the card */
 }
 
 .blog-description {
-  color: #888;
+  font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  text-align: left;
   margin: 10px 0;
+  /* Styling for the blog description inside the card */
 }
 
 .blog-meta {
   font-size: 0.8rem;
   color: #aaa;
+  text-align: left;
+  /* Styling for the meta information inside the blog card */
 }
 
 .read-more-button {
@@ -77,4 +95,5 @@
   cursor: pointer;
   margin-top: 20px;
   display: inline-block; /* Adjust display to inline-block */
+  /* Styling for the read more button inside the blog card */
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import './WalletSection.css';
+import walletImage from '../assets/wallet.png';
 
 const WalletSection = () => (
   <section className="wallet-section-wrapper">
     <div className="wallet-content">
       <div className="wallet-image">
-        <img src="./walletsection.png" alt="Wallet Illustration" />
+        <img src={walletImage} alt="Wallet Illustration" />
       </div>
       <div className="wallet-text">
         <h2>Non hai ancora un Wallet?</h2>
@@ -17,3 +18,4 @@ const WalletSection = () => (
 );
 
 export default WalletSection;
+

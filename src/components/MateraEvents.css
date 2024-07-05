@@ -16,7 +16,7 @@ html, body {
   box-sizing: border-box;
   position: relative;
   top: -10px;
-  margin-left: 80px;
+  margin-left: 50px;
   z-index: 2;
 }
 
@@ -37,7 +37,7 @@ html, body {
 
 /* Logo image styling */
 .logo-imgEventDetail {
-  width: 200px;
+  width: 150px;
   height: auto;
   padding: 10px 0;
   margin-left: 10px;
@@ -88,7 +88,7 @@ html, body {
   cursor: pointer;
   box-shadow: none;
   transition: background-color 0.3s, color 0.3s;
-  margin-right: 10px;
+
 }
 
 /* Background section including image and info bar */
@@ -183,7 +183,7 @@ html, body {
 }
 
 /* Event purchase button */
-.event-purchase-EventDetail-button {
+.event-purchase-MateraEvents-button {
   padding: 10px 20px;
   display: flex;
   justify-content: center;
@@ -314,7 +314,7 @@ html, body {
 }
 
 /* Purchase section container */
-.purchase-section-EventDetail {
+.purchase-section-MateraEvents {
   background-color: #2a2b69; /* Dark blue background color */
   color: white; /* White text color */
   text-align: center; /* Center-align text within the section */
@@ -327,7 +327,7 @@ html, body {
 }
 
 /* Title of the purchase section */
-.purchase-title-EventDetail {
+.purchase-title-MateraEvents {
   font-family: 'Inter', sans-serif;
   font-size: 2rem; /* Font size of the title */
   margin-bottom: 50px; /* Space below the title */
@@ -337,7 +337,7 @@ html, body {
 }
 
 /* Container for the card elements */
-.purchase-cards-EventDetail {
+.purchase-cards-MateraEvents {
   display: flex; /* Use flexbox to arrange cards */
   justify-content: center; /* Center the cards horizontally */
   margin-top: 59px; /* Space above the button container */
@@ -346,7 +346,7 @@ html, body {
 }
 
 /* Individual card styling */
-.purchase-card-EventDetail {
+.purchase-card-MateraEvents {
   background-color: #242565; /* Same dark blue background color */
   border-radius: 20px; /* Rounded corners */
   padding: 20px; /* Padding inside the card */
@@ -356,34 +356,34 @@ html, body {
 }
 
 /* Hover effect for cards */
-.purchase-card-EventDetail:hover {
+.purchase-card-MateraEvents:hover {
   transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Lift and tilt the card on hover */
   box-shadow: 0px 20px 60px 0px rgba(61, 55, 241, 0.35); /* Enhanced shadow on hover for more depth */
 }
 
 /* Icon styling inside each card */
-.icon-EventDetail {
+.icon-MateraEvents {
   font-family: 'Inter', sans-serif;
   font-size: 2rem; /* Large font size for icons */
   margin-bottom: 10px; /* Space below the icon */
 }
 
 /* Styles for the card titles */
-.purchase-card-EventDetail h3 {
+.purchase-card-MateraEvents h3 {
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem; /* Font size for card titles */
   margin: 10px 0; /* Space above and below the title */
 }
 
 /* Styles for the card text */
-.purchase-card-EventDetail p {
+.purchase-card-MateraEvents p {
   font-family: 'Inter', sans-serif;
   font-size: 1rem; /* Font size for the paragraph text */
   line-height: 1.5; /* Line height for better readability */
 }
 
 /* Container for the buttons below the cards */
-.purchase-buttons-EventDetail {
+.purchase-buttons-MateraEvents {
   display: flex; /* Use flexbox to arrange buttons */
   justify-content: center; /* Center the buttons horizontally */
   gap: 20px; /* Space between buttons */
@@ -391,7 +391,7 @@ html, body {
 }
 
 /* General styles for buttons */
-.purchase-button-EventDetail {
+.purchase-button-MateraEvents {
   padding: 10px 20px; /* Padding inside the button */
   font-family: 'Inter', sans-serif;
   font-size: 1rem; /* Font size for the button text */
@@ -404,7 +404,7 @@ html, body {
 }
 
 /* Additional styles for the primary button */
-.purchase-button.primary-EventDetail {
+.purchase-button.primary-MateraEvents {
   background-color: #F5167E; /* Pink background color */
   border: none; /* No border */
   box-shadow: 0px 10px 50px rgba(61, 55, 241, 0.25); /* Shadow for depth */
@@ -412,20 +412,20 @@ html, body {
 }
 
 /* Hover effect for all buttons */
-.purchase-button-EventDetail:hover {
+.purchase-button-MateraEvents:hover {
   background-color: #ffffff; /* White background on hover */
   color: #242565; /* Dark blue text color on hover */
 }
 
 /* Related section styles */
-.related-section-EventDetail {
+.related-section-MateraEvents {
   background-color: #ffffff; /* Light gray background color */
   padding: 50px 20px; /* Padding around the section */
   text-align: center; /* Center-align text within the section */
 }
 
 /* Title of the related section */
-.related-title-EventDetail {
+.related-title-MateraEvents {
   font-family: 'Inter', sans-serif;
   font-size: 2rem; /* Font size of the title */
   color: #242565; /* Dark blue color */
@@ -434,14 +434,14 @@ html, body {
 }
 
 /* Container for the related cards */
-.related-cards-EventDetail {
+.related-cards-MateraEvents {
   display: flex; /* Use flexbox to arrange cards */
   justify-content: center; /* Center the cards horizontally */
   gap: 20px; /* Space between each card */
 }
 
 /* Individual related card styling */
-.related-card-EventDetail {
+.related-card-MateraEvents {
   background-color: white; /* White background color for the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -451,28 +451,28 @@ html, body {
 }
 
 /* Image inside the related card */
-.related-card-image-EventDetail {
+.related-card-image-MateraEvents {
   width: 100%; /* Full width for the image */
   height: 180px; /* Fixed height for the image */
   object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
 /* Container for the card info */
-.related-card-info-EventDetail {
+.related-card-info-MateraEvents {
   padding: 15px; /* Padding inside the card */
   display: flex; /* Use flexbox to arrange content and date */
   justify-content: space-between; /* Space between content and date */
 }
 
 /* Container for the date section */
-.related-card-date-EventDetail {
+.related-card-date-MateraEvents {
   display: flex; /* Use flexbox for vertical alignment */
   flex-direction: column; /* Stack month and day vertically */
   align-items: center; /* Center-align month and day */
 }
 
 /* Styling for the month text */
-.related-card-month-EventDetail {
+.related-card-month-MateraEvents {
   font-family: 'Inter', sans-serif;
   line-height: normal;
   color: #3D37F1;
@@ -484,7 +484,7 @@ html, body {
 }
 
 /* Styling for the day text */
-.related-card-day-EventDetail {
+.related-card-day-MateraEvents {
   font-family: 'Inter', sans-serif;
   font-size: 28.429px;
   font-style: normal;
@@ -494,14 +494,14 @@ html, body {
 }
 
 /* Container for the card content (title and description) */
-.related-card-content-EventDetail {
+.related-card-content-MateraEvents {
   display: flex;
   flex-direction: column; /* Stack title and description vertically */
   margin-top: -20px;
 }
 
 /* Styling for the card title */
-.related-card-title-EventDetail {
+.related-card-title-MateraEvents {
   color: #000;
   font-family: "DM Sans";
   font-size: 16px;
@@ -514,10 +514,10 @@ html, body {
 }
 
 /* Styling for the card description */
-.related-card-description-EventDetail {
+.related-card-description-MateraEvents {
   font-family: 'Inter', sans-serif;
   color: #6A6A6A;
-  font-family: "DM Sans";
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -526,7 +526,7 @@ html, body {
 }
 
 /* Pagination dots container */
-.related-pagination-EventDetail {
+.related-pagination-MateraEvents {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -534,7 +534,7 @@ html, body {
 }
 
 /* Individual pagination dot styling */
-.related-pagination-EventDetail .dot {
+.related-pagination-MateraEvents .dot {
   height: 10px; /* Height of the dot */
   width: 10px; /* Width of the dot */
   margin: 0 5px; /* Space between dots */
@@ -543,19 +543,19 @@ html, body {
 }
 
 /* Color specific pagination dots */
-.related-pagination-EventDetail .dot:nth-child(1) {
+.related-pagination-MateraEvents .dot:nth-child(1) {
   background-color: #242565; /* Dark blue */
 }
 
-.related-pagination-EventDetail .dot:nth-child(2) {
+.related-pagination-MateraEvents .dot:nth-child(2) {
   background-color: #3A3B74; /* Gray */
 }
 
-.related-pagination-EventDetail .dot:nth-child(3) {
+.related-pagination-MateraEvents .dot:nth-child(3) {
   background-color: #3A3B7433; /* Light gray */
 }
 
-.wallet-section-EventDetail {
+.wallet-section-MateraEvents {
   display: flex; /* Enables flexbox layout for the container */
   align-items: center; /* Centers items vertically within the container */
   justify-content: center; /* Centers items horizontally within the container */
@@ -569,22 +569,22 @@ html, body {
 }
 
 
-.wallet-image-EventDetail {
+.wallet-image-MateraEvents {
   max-width: 400px; /* Set a max width for the wallet image */
   margin-right: 30px;
 }
 
-.wallet-content-EventDetail {
+.wallet-content-MateraEvents {
   text-align: left; /* Align text to the left */
 }
 
-.wallet-content-EventDetail h2 {
+.wallet-content-MateraEvents h2 {
   font-family: 'Inter', sans-serif;
   font-size: 2rem; /* Font size for the title */
   margin-bottom: 10px;
 }
 
-.wallet-content-EventDetail p {
+.wallet-content-MateraEvents p {
   font-family: 'Inter', sans-serif;
   font-size: 1rem; /* Font size for the paragraph */
   margin-bottom: 20px;
@@ -608,14 +608,14 @@ html, body {
 }
 
 /* Category section styles */
-.category-section-EventDetail {
+.category-section-MateraEvents {
   padding: 50px 20px;
   text-align: center;
   background-color: #ffffff; /* White background color */
  
 }
 
-.category-title-EventDetail {
+.category-title-MateraEvents {
   font-family: 'Inter', sans-serif;
   font-size: 2rem; /* Font size for the title */
   color: #242565; /* Dark blue color for the title */
@@ -624,7 +624,7 @@ html, body {
 }
 
 /* Category cards container */
-.category-cards-EventDetail {
+.category-cards-MateraEvents {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -633,7 +633,7 @@ html, body {
 }
 
 /* Individual category card styling */
-.category-card-EventDetail {
+.category-card-MateraEvents {
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
@@ -643,7 +643,7 @@ html, body {
 }
 
 /* Image inside the category card */
-.category-card-image-EventDetail {
+.category-card-image-MateraEvents {
   width: 100%; /* Set width to 100% to fit within the card */
   height: 200px;
   object-fit: cover;
@@ -653,7 +653,7 @@ html, body {
 }
 
 /* Label for the category card */
-.category-card-label-EventDetail {
+.category-card-label-MateraEvents {
   position: absolute; /* Position the label absolutely relative to the nearest positioned ancestor */
   top: 180px; /* Position it 176px from the top of the nearest positioned ancestor */
   left: 50%; /* Position it in the center horizontally relative to the nearest positioned ancestor */
@@ -676,150 +676,3 @@ html, body {
   z-index: 2; /* Higher z-index to place label above image */
 }
 
-/* Footer section styles */
-.footer-EventDetail {
-  background-color: #0A075F; /* Set background color to dark blue */
-  color: white; /* Set text color to white */
-  padding: 40px 20px; /* Add padding around the section */
-  text-align: left; /* Align text to the left */
-}
-
-.footer-container-EventDetail {
-  display: flex; /* Use flexbox to arrange columns */
-  flex-wrap: wrap; /* Allow columns to wrap */
-  justify-content: space-between; /* Space between columns */
-  max-width: 1200px; /* Set maximum width for the footer container */
-  margin: 0 auto; /* Center the footer container */
-}
-
-.footer-column-EventDetail {
-  flex: 1; /* Allow columns to grow and shrink equally */
-  min-width: 250px; /* Minimum width for each column */
-  margin: 20px 20px 0 0; /* Add vertical space between columns */
-}
-
-/* Specific columns with additional top margin */
-.logo-column {
-  margin-top: 40px; /* Adjust the top margin to move the column lower */
-}
-
-.eventi-column {
-  margin-top: 90px; /* Adjust the top margin to move the column lower */
-  margin-right: -100px;
-  
-}
-
-.utility-column {
-  margin-top: 90px; /* Adjust the top margin to move the column lower */
-  margin-right: -100px;
-}
-
-.subscribe-column {
-  margin-top: 90px; /* Adjust the top margin to move the column lower */
-}
-
-.footer-logo-EventDetail {
-  width: 190px; /* Set fixed width for the logo */
-  margin-bottom: 20px; /* Add space below the logo */
-}
-
-.footer-social-EventDetail {
-  display: flex; /* Use flexbox for the social icons */
-  gap: 10px; /* Space between social icons */
-  margin-top: 20px; /* Space above the social icons */
-}
-
-.footer-social-EventDetail img {
-  width: 30px; /* Fixed width for social icons */
-  height: auto; /* Auto height to maintain aspect ratio */
-}
-
-.footer-column-EventDetail h3 {
-  font-family: 'Inter', sans-serif; /* Set font family */
-  font-size: 1rem; /* Set font size for the column titles */
-  margin-bottom: 10px; /* Add space below the column titles */
-}
-
-.footer-column-EventDetail ul {
-  list-style: none; /* Remove list styling */
-  padding: 0; /* Remove padding */
-}
-
-.footer-column-EventDetail li {
-  margin-bottom: 10px; /* Add space between list items */
-}
-
-.footer-column-EventDetail a {
-  color: white; /* Set text color to white */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Add smooth transition for color */
-}
-
-/* Subscribe section styles */
-.footer-subscribe-EventDetail {
-  display: flex; /* Use flexbox to arrange input and button */
-  align-items: center; /* Center align items vertically */
-  gap: 10px; /* Space between input and button */
-  margin-top: 25px; /* Add space above the subscribe section */
-  background-color: #FFF; /* Set background color to white */
-  border-radius: 40px; /* Add rounded corners */
-  border: 2px solid #F1F1F1; /* Add border */
-  padding: 5px; /* Add padding inside the container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-  max-width: 400px; /* Set maximum width for the subscribe container */
-}
-
-.footer-subscribe-EventDetail input {
-  padding: 10px 15px; /* Add padding inside the input */
-  border-radius: 30px; /* Add rounded corners */
-  border: none; /* Remove border */
-  flex: 1; /* Allow input to grow */
-  font-family: 'Inter', sans-serif; /* Set font family */
-  font-size: 14px; /* Set font size for the input */
-  outline: none; /* Remove outline on focus */
-}
-
-.footer-subscribe-EventDetail button {
-  height: 40px; /* Set height for the button */
-  padding: 0 20px; /* Add padding inside the button */
-  background-color: #F5167E; /* Set background color to pink */
-  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25); /* Add shadow for depth */
-  color: white; /* Set text color to white */
-  border: none; /* Remove border */
-  border-radius: 25px; /* Add rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  font-family: 'Inter', sans-serif; /* Set font family */
-  font-size: 14px; /* Set font size */
-  font-style: normal; /* Set font style */
-  font-weight: 500; /* Set font weight */
-  margin-left: -30px; /* Adjust position to sit inside the oval properly */
-  z-index: 1; /* Ensure button is on top layer */
-}
-
-.footer-subscribe-EventDetail button:hover {
-  background-color: #e60073; /* Change background color on hover */
-}
-
-/* Bottom section styles */
-.footer-bottom-EventDetail {
-  text-align: center; /* Center-align text */
-  margin-top: 30px; /* Add space above the bottom section */
-  font-family: 'Inter', sans-serif; /* Set font family */
-  font-size: 0.875rem; /* Set font size for the bottom text */
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add top border */
-  padding-top: 20px; /* Add padding to the top */
-}
-
-/* Additional styles for the paragraph text in the footer */
-.footer-column-EventDetail p {
-  color: #F3F3F3;
-  font-family: 'Inter', sans-serif; /* Set font family */
-  font-size: 14px; /* Adjust the font size */
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%; /* 22.4px */
-  margin-bottom: 20px; /* Add space below the paragraph */
-  text-align: justify; /* Justify the text for a cleaner look */
-  max-width: 600px; /* Set maximum width to prevent it from stretching too wide */
-  margin-right: 80px;
-}

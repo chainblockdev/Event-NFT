@@ -1,34 +1,51 @@
+/* Styles for the container of the like button */
 .like-button {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
+  position: absolute; /* Position the container absolutely */
+ 
+  display: flex; /* Use flexbox for layout */
+  gap: 8px; /* Space between buttons */
 }
 
+/* Styles for the individual icon buttons */
 .icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0 5px;
+  cursor: pointer; /* Change cursor to pointer when hovering over the button */
+  width: 36px; /* Set width of the button */
+  height: 36px; /* Set height of the button */
+  display: flex; /* Use flexbox for the button layout */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  border-radius: 10px; /* Make the button square with rounded corners */
+  border: none; /* Remove any border around the button */
 }
 
-.heart-icon, .magnifier-icon {
-  font-size: 24px;
-  transition: transform 0.2s;
+/* Specific styles for the heart button */
+.heart-button {
+  background-color: #FF5A5F; /* Set red background color for the heart button */
+  /* Additional specific styles for the heart button can be added here */
 }
 
-.heart-icon {
-  color: red;
+/* Specific styles for the search button */
+.search-button {
+  background-color: #242565; /* Set blue background color for the search button */
+  /* Additional specific styles for the search button can be added here */
 }
 
-.magnifier-icon {
-  color: black;
+/* Styles for the icons inside the buttons */
+.button-icon img {
+  width: 20px; /* Set width of the image */
+  height: 20px; /* Set height of the image */
+  margin-bottom: -5px; /* Add margin at the bottom of the image */
 }
 
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+/* Styles for the liked state of the heart icon */
+.heart-button .button-icon .icon.liked {
+  transform: scale(1.2); /* Scale up the icon when liked */
+  transition: transform 0.2s; /* Add a smooth transition effect for the scale transformation */
+  /* Additional specific styles for the liked state of the heart icon can be added here */
+}
+
+/* Styles for the active state of the search icon */
+.search-button .button-icon .icon.active {
+  transform: scale(1.2); /* Scale up the icon when active */
+  transition: transform 0.2s; /* Add a smooth transition effect for the scale transformation */
 }
