@@ -71,11 +71,11 @@ html, body {
 /* Navigation links container */
 .nav-links {
   display: flex;
-  gap: 45px; /* Adjust this value to set the gap between links */
+  gap: 20px; /* Adjust this value to set the gap between links */
   align-items: center;
   justify-content: flex-end; /* Right align the navigation links */
   flex-grow: 1;
-  margin-left: -20px
+  margin-left: -20px;
 }
 
 @media (max-width: 768px) {
@@ -107,7 +107,7 @@ html, body {
   font-family: 'Inter', sans-serif; /* Updated to use Inter font */
   font-size: 16px;
   flex-shrink: 0;
-  background-color: transparent; /* Ensure background is transparent */
+  background-color: #242565; /* Ensure background is transparent */
   color: #FFF;
   border-radius: 50px;
   border: 1.5px solid #FFF;
@@ -120,6 +120,13 @@ html, body {
 .nav-bar .wallet-button:hover {
   background-color: white;
   color: #242565; /* Adjust color on hover */
+}
+
+/* Nav icons styling */
+.nav-icon {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+  cursor: pointer;
 }
 
 /* Content container within the hero section */

@@ -1,0 +1,475 @@
+/* src/components/CartPage.css */
+
+/* Overall cart page styles */
+.cart-page {
+    background-color: #1D1F34;
+    color: white;
+    height: 900px;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navigation bar styles */
+.cart-page-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Logo container styles */
+.cart-page-logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 350px;
+}
+
+/* Logo image styles */
+.cart-page-logo-img {
+    width: 200px;
+    height: auto;
+    padding: 10px 0;
+    margin-left: -20px;
+}
+
+/* Navigation links container styles */
+.cart-page-nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-left: -20px;
+}
+
+/* Individual navigation link styles */
+.cart-page-nav-link {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/* Navigation link hover effect */
+.cart-page-nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Wallet button styles */
+.cart-page-wallet-button {
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    flex-shrink: 0;
+    background-color: transparent;
+    color: #FFF;
+    border-radius: 50px;
+    border: 1.5px solid #FFF;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+/* Wallet button hover effect */
+.cart-page-wallet-button:hover {
+    background-color: white;
+    color: #242565;
+}
+
+/* Navigation icon styles */
+.cart-page-nav-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Cart header styles */
+.cart-page-header {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Cart header title styles */
+.cart-page-header h1 {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 850px;
+
+}
+
+/* Main content container styles */
+.cart-page-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Cart items section styles */
+.cart-page-items {
+    flex: 3;
+    margin-right: 20px;
+    background-color: #1D1F34; /* Ensure background matches the page */
+}
+
+/* Cart items title styles */
+.cart-page-items h2 {
+    color: #F5167E;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative; /* Required for the ::after pseudo-element */
+    margin-right: 530px;
+}
+
+.cart-page-items h2::after {
+    content: '';
+    display: block;
+    width: 330%;
+    border-bottom: 1px solid #E9E9EB; /* Light grey color for the divider */
+    margin-top: 10px; /* Space between title and line */
+}
+
+
+/* Individual cart item styles */
+.cart-page-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Cart item image styles */
+.cart-page-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Cart item details styles */
+.cart-page-item-details {
+    flex: 2;
+    color: #F5167E;
+}
+
+.cart-page-item-details h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #F5167E;
+}
+
+.cart-page-item-details p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 0;
+}
+
+/* Cart item price styles */
+.cart-page-item-price {
+    flex: 1;
+    text-align: right;
+    color: #F5167E;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Cart item quantity control styles */
+.cart-page-item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.cart-page-item-quantity button {
+    background: none;
+    border: none;
+    color: #bbb;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cart-page-item-quantity span {
+    width: 30px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    margin: 0 5px;
+}
+
+/* Cart item remove button styles */
+.cart-page-item-remove {
+    background: #F5167E;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* Order summary section styles */
+.cart-page-summary {
+    flex: 1;
+    width: 368px;
+height: 350px;
+flex-shrink: 0;
+    
+    border-radius: 4px;
+border: 1px solid var(--Neutral-Black-B100, #E6E7E8);
+    padding: 20px;
+
+}
+
+/* Order summary title styles */
+.cart-page-summary h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+    font-weight: 700;
+    color: #F5167E;
+    margin-right: 94px;
+}
+
+/* Order summary details styles */
+.cart-page-summary-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Order summary separator styles */
+.cart-page-summary-details hr {
+    border: none;
+    height: 1px;
+    background: #E6E7E8;
+    margin: 40px 0;
+}
+
+/* Order summary total styles */
+.cart-page-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Checkout button styles */
+.cart-page-checkout-button {
+    color: white;
+    padding: 10px;
+    width: 60%;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid #F5167E;
+    background: #F5167E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+/* Back to events link styles */
+.cart-page-back-to-events {
+    color: #F5167E;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Event list section container */
+.cart-page .event-list-section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 40px 0;
+}
+
+/* Event list header styles */
+.cart-page .event-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0; /* Adding bottom border for visual separation */
+    padding-bottom: 10px; /* Padding to create space between content and border */
+}
+
+/* Event list title */
+.event-list-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1D1F34;
+}
+
+/* Event list filter button container */
+.cart-page .event-list-filter {
+    display: flex;
+    align-items: center;
+}
+
+/* Filter icon styles */
+.filter-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Filter button styles */
+.cart-page .filter-button {
+    background: none;
+    border: none;
+    color: #F5167E;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Aligning text with the icon */
+}
+
+/* Event list container */
+.cart-page .event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual event item styles */
+.cart-page .event-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+/* Event image styles */
+.cart-page .event-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Event details container */
+.cart-page .event-details {
+    flex: 1;
+}
+
+/* Event date styles */
+.cart-page .event-date {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Event time styles */
+.cart-page .event-time {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Event title styles */
+.cart-page .event-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Event location styles */
+.cart-page .event-location {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Event actions container */
+.cart-page .event-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Details button styles */
+.cart-page .details-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #F5167E;
+    color: #F5167E;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Details button hover effect */
+.cart-page .details-button:hover {
+    background-color: #F5167E;
+    color: white;
+}
+
+/* Purchase button styles */
+.cart-page .purchase-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #F5167E;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Purchase button hover effect */
+.cart-page .purchase-button:hover {
+    background-color: #e01470;
+}
+
+/* Faded event item styles */
+.cart-page .faded-event {
+    opacity: 0.3;
+}
+
+/* Show more button container */
+.cart-page .show-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Show more button styles */
+.cart-page .show-more-button {
+    background: none;
+    border: none;
+    color: #F5167E;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Wallet section styles for the CartPage */
+.cart-page .wallet-section-wrapper {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 20px auto; /* Center the section and add vertical margins */
+}
+
+/* Wallet section content styles for the CartPage */
+.cart-page .wallet-content {
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 16px; /* Adjust border-radius as needed */
+}

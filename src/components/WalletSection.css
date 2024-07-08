@@ -12,7 +12,7 @@
   padding: 1px; /* Adds a 1px padding inside the container */
   border-radius: 0px; /* Sets the border radius to 0, making the edges square */
   padding-right: 15px;/* Adds 20px padding on the right side */
-  width: 1100px; /* Sets the width to 100% of the parent container */
+  width: 1000px; /* Sets the width to 100% of the parent container */
   height: 230px; /* Sets the height of the container to 200px */
 }
 

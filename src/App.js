@@ -9,8 +9,10 @@ import EventsOfTheWeek from './components/EventsOfTheWeek';
 import BrandsSection from './components/BrandsSection';
 import BlogSection from './components/BlogSection';
 import FooterSection from './components/FooterSection';
-import MateraEvents from './components/MateraEvents'; // Import MateraEvents component
-import UpcomingEvents from './components/UpcomingEvents'; // Import UpcomingEvents component
+import MateraEvents from './components/MateraEvents';
+import UpcomingEvents from './components/UpcomingEvents';
+import CartPage from './components/CartPage'; // Import CartPage component
+import ProfilePage from './components/ProfilePage'; // Import ProfilePage component
 import './App.css';
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
             </>
           } />
           <Route path="/event/:id" element={<MateraEvents />} />
-          <Route path="/upcomingevents" element={<UpcomingEvents />} /> {/* Add route for UpcomingEvents */}
+          <Route path="/upcomingevents" element={<UpcomingEvents />} />
+          <Route path="/cart" element={<CartPage />} /> {/* Add route for CartPage */}
+          <Route path="/profile" element={<ProfilePage />} /> {/* Add route for ProfilePage */}
         </Routes>
       </div>
     </Router>

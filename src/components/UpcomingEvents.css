@@ -283,17 +283,17 @@
 /* Concerts title styling */
 .concerts-titleUpcomingEvents {
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 28px;
     color: #242565;
     margin-bottom: 20px;
-    margin-left: 210px;
+    margin-left: 170px;
 }
 
 /* Filter container styling */
 .filter-containerUpcomingEvents {
     display: flex;
     align-items: center;
-    margin-right: 270px;
+    margin-right: 230px;
     margin-bottom: -1px;
 }
 
