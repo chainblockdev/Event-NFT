@@ -11,8 +11,11 @@ import BlogSection from './components/BlogSection';
 import FooterSection from './components/FooterSection';
 import MateraEvents from './components/MateraEvents';
 import UpcomingEvents from './components/UpcomingEvents';
-import CartPage from './components/CartPage'; // Import CartPage component
-import ProfilePage from './components/ProfilePage'; // Import ProfilePage component
+import CartPage from './components/CartPage';
+import Wishlist from './components/Wishlist';
+import SignIn from './components/SignIn';
+import SignOut from './components/SignOut';
+import BlogDetails from './components/BlogDetails'; // Import BlogDetails component
 import './App.css';
 
 function App() {
@@ -34,8 +37,11 @@ function App() {
           } />
           <Route path="/event/:id" element={<MateraEvents />} />
           <Route path="/upcomingevents" element={<UpcomingEvents />} />
-          <Route path="/cart" element={<CartPage />} /> {/* Add route for CartPage */}
-          <Route path="/profile" element={<ProfilePage />} /> {/* Add route for ProfilePage */}
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/profile" element={<Wishlist />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signout" element={<SignOut />} />
+          <Route path="/BlogSection/:id" element={<BlogDetails />} /> {/* Add route for BlogDetails */}
         </Routes>
       </div>
     </Router>

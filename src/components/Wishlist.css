@@ -1,0 +1,492 @@
+/* Ensure all elements follow the same box-sizing rule */
+* {
+  box-sizing: border-box;
+}
+
+/* Styles for the main wishlist container */
+.wishlist-container {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Styles for the hero section with background image */
+.wishlist-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 5%;
+  background-image: url('../assets/background/Rectangle.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navbar styles */
+.wishlist-navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.wishlist-logo {
+  height: 40px;
+}
+
+.wishlist-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: 60px;
+}
+
+.wishlist-nav-links li {
+  display: inline;
+  margin: 0 15px;
+  margin-left: 30px;
+}
+
+.wishlist-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.connect-wallet-btn {
+  border-radius: 50px;
+  border: 1.5px solid #FFF;
+  background: #242565;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #FFF;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.wishlist-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.wishlist-hero-content {
+  margin-top: 150px;
+}
+
+.wishlist-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Favorites section styles */
+.wishlist-favorites {
+  margin: 50px 5%;
+}
+
+.wishlist-favorites h2 {
+  color: #242565;
+ font-family: 'Inter', sans-serif;
+ font-size: 30px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: normal;
+  text-align: start;
+  margin-left: 10px;
+}
+
+.wishlist-favorites hr {
+  border: 0;
+  width: 1100px;
+  height: 1px;
+  background: #D9D9D9;
+  margin: 20px 10px;
+ 
+}
+
+/* Event cards container styles */
+.wishlist-event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual event card styles */
+.wishlist-event-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.wishlist-event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Event info section styles */
+.wishlist-event-info {
+  padding: 15px;
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+}
+
+.wishlist-event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px; /* Space between date and details */
+  margin-bottom: 10px;
+}
+
+.wishlist-event-date .month {
+ 
+  font-size: 1rem;
+  color: #3D37F1;
+
+}
+
+.wishlist-event-date .day {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-top: -5px;
+}
+
+/* Event details styles */
+.wishlist-event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.wishlist-event-details h3 {
+  margin: 0; /* Remove all margins around the title */
+  margin-bottom: 5px; /* Add a small margin below the title */
+  font-size: 1.1rem; /* Ensure title stands out */
+  font-weight: bold;
+  color: #000000; /* Adjust color if needed */
+}
+
+.wishlist-event-details p {
+  margin: 0; /* Remove all margins around the description */
+  font-size: 0.8rem;
+  align-items: flex-start;
+  text-align: left;
+  color: #6A6A6A;
+}
+
+
+/* Search button styles */
+.wishlist-search-btn {
+  position: absolute;
+  top: 170px;
+  right: 15px;
+  background: #242565;
+  border: none;
+  padding: 8px;
+  border-radius: 30%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.wishlist-search-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* View all button styles */
+.view-all-btn {
+  width: 182px;
+  height: 60px;
+  flex-shrink: 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #FFF;
+  color: #3D37F1;
+  border: 1.5px solid #3D37F1;
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* Filter section styles scoped to the unique class */
+.unique-filter {
+  display: flex;
+  justify-content: space-between; /* Evenly space items */
+  align-items: center;
+  background-color: #242565; /* Match the dark blue background */
+  color: white;
+  padding: 20px 3%;
+  margin: 60px auto; /* Centered horizontally */
+  width: 1088px; 
+  height: 140px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Adjust the bottom margin to control the gap between sections */
+.unique-filter {
+  margin-top: 90px; /* Adjust this value to control the gap */
+}
+
+.unique-filter .filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin: 0 10px;
+  min-width: 200px;
+}
+
+.unique-filter .filter-item label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #bbb; /* Lighter color for the label */
+}
+
+.unique-filter .filter-item input,
+.unique-filter .filter-item select {
+  background-color: #242565; /* Match background */
+  color: white;
+  border: none;
+  border-bottom: 1px solid #717d96; /* Light border line */
+  padding: 5px 0;
+  font-size: 1.1rem; /* Slightly larger text */
+  width: 100%;
+  font-weight: bold; /* Bold font for the input */
+  margin-top: 5px; /* Add some margin to separate from the label */
+  appearance: none; /* Remove default dropdown arrow */
+}
+
+.unique-filter .filter-item input[readonly],
+.unique-filter .filter-item select {
+  cursor: pointer;
+}
+
+/* Specific styles for the 'date' select element with custom arrow */
+.unique-filter #date {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%277%27 viewBox=%270 0 12 7%27%3E%3Cpath fill=%27%23FFF%27 d=%27M6 7L0 1.007 1.41 0 6 4.586 10.59 0 12 1.007z%27/%3E%3C/svg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px; /* Adjust size as needed */
+  padding-right: 30px; /* Add padding to ensure text doesn't overlap with arrow */
+}
+
+/* Container for the nearby events section */
+.nearbyEvents-container {
+  padding: 20px;
+  background-color: #fff; /* Background color of the section */
+}
+
+.nearbyEvents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nearbyEvents-header h2 {
+  font-size: 24px;
+  color: #1a1a1a; /* Dark text color */
+  margin-left: 110px;
+}
+
+.nearbyEvents-filter-icon {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #1a1a1a; /* Dark text color */
+  margin-right: 140px;
+}
+
+.nearbyEvents-filter-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.nearbyEvents-divider {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 10px 0;
+}
+
+.nearbyEvents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between event items */
+}
+
+.nearbyEvents-item {
+  display: flex;
+  align-items: center;
+  padding: 1px 100px;
+}
+
+.nearbyEvents-item img {
+  width: 133px;
+  height: 135.512px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.nearbyEvents-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.nearbyEvents-details p {
+  margin: 2px 0;
+  color: #666666; /* Grey text color */
+  text-align: left; /* Align text to the left */
+}
+
+.nearbyEvents-details h3 {
+  margin: 5px 0;
+  color: #1a1a1a; /* Dark text color */
+  font-size: 18px;
+  text-align: left; /* Align text to the left */
+}
+
+.nearbyEvents-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nearbyEvents-details-btn, .nearbyEvents-buy-now-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 2px solid #ff0080;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nearbyEvents-details-btn {
+  color: #ff0080;
+}
+
+.nearbyEvents-details-btn:hover {
+  background-color: #ff0080;
+  color: #fff;
+}
+
+.nearbyEvents-buy-now-btn {
+  background-color: #ff0080;
+  color: #fff;
+}
+
+.nearbyEvents-buy-now-btn:hover {
+  background-color: #e60073;
+}
+
+.nearbyEvents-show-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ff0080;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.nearbyEvents-show-more-btn:hover {
+  text-decoration: none;
+}
+
+.nearbyEvents-item:nth-child(4) {
+  opacity: 0.5; /* Makes the fourth card semi-transparent */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Wallet section styles */
+.wishlist-wallet {
+  display: flex;
+  justify-content: center;
+  background-color: #F5F5F5;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.wishlist-wallet-content {
+  text-align: center;
+}
+
+.wallet-info {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.create-wallet-btn {
+  background-color: #E91E63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .wishlist-hero h1 {
+    font-size: 2rem;
+  }
+
+  .wishlist-event-card {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .wishlist-filter {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-item {
+      width: 100%;
+      margin: 10px 0; /* Adjust margin for spacing */
+    }
+  }
+}

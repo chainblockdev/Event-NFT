@@ -2,9 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeroSection.css';
-import logo from '../assets/icons/Logo.png'; // Adjust the import path as needed
-import cartIcon from '../assets/icons/cart.jpg'; // Correct import path for cart icon
-import profileIcon from '../assets/icons/profile.jpg'; // Correct import path for profile icon
+import logo from '../assets/icons/Logo.png';
+import cartIcon from '../assets/icons/cart.jpg';
+import profileIcon from '../assets/icons/profile.jpg';
 
 const HeroSection = () => (
   <section className="hero-wrapper">
@@ -22,7 +22,7 @@ const HeroSection = () => (
         <Link to="/cart">
           <img src={cartIcon} alt="Cart" className="nav-icon" />
         </Link>
-        <Link to="/profile">
+        <Link to="/signin">
           <img src={profileIcon} alt="Profile" className="nav-icon" />
         </Link>
       </div>

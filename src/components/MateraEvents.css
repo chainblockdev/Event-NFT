@@ -101,7 +101,7 @@ html, body {
   justify-content: flex-start;
   padding: 20px 5%;
   box-sizing: border-box;
-  background: url(../../public/whale.png) lightgray 36.31px 0px / 95.238% 118.804% no-repeat;
+  background: url('../assets/background/whale.png') lightgray 36.31px 0px / 95.238% 118.804% no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -563,8 +563,8 @@ html, body {
   padding: 50px 20px; /* Adds padding of 50px on the top and bottom, and 20px on the left and right */
   text-align: center; /* Centers the text within the container */
   margin: 50px auto; /* Adds a top margin of 50px and centers the container */
-  max-width: 1000px; /* Sets the maximum width of the container */
-  max-height: 100px; /* Sets the maximum height of the container to 500px */
+  max-width: 1500px; /* Sets the maximum width of the container */
+  max-height: 200px; /* Sets the maximum height of the container to 500px */
 
 }
 
@@ -590,7 +590,7 @@ html, body {
   margin-bottom: 20px;
 }
 
-.wallet-button {
+.wallet-button-MateraEvents {
   padding: 10px 20px;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;

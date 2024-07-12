@@ -23,7 +23,7 @@
 }
 
 .wallet-image img {
-  max-width: 140%; /* Sets the maximum width of the image to 100% of its container */
+  max-width: 160%; /* Sets the maximum width of the image to 100% of its container */
   height: auto; /* Keeps the aspect ratio of the image */
   border-radius: 10px; /* Rounds the corners of the image with a radius of 10px */
   margin-left: 80px;
@@ -55,12 +55,14 @@
 }
 
 .wallet-button {
+  padding: 10px 20px;
   font-family: 'Inter', sans-serif;
-  padding: 10px 100px; /* Adds 10px padding on the top and bottom, and 100px padding on the left and right */
-  font-size: 16px; /* Sets the font size of the button text to 16px */
-  background-color: #F5167E; /* Sets the background color of the button to a bright pink */
-  color: white; /* Sets the text color of the button to white */
-  border: none; /* Removes any border from the button */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
-  border-radius: 20px; /* Rounds the corners of the button with a radius of 20px */
+  font-size: 1rem;
+  background-color: #f5167e;
+  box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }

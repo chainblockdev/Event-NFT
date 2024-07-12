@@ -18,7 +18,7 @@ html, body {
   justify-content: flex-start;
   padding: 20px 5%; /* Use percentage for padding to be responsive */
   box-sizing: border-box;
-  background-image: url('../../public/Rectangle 12.png'); /* Background image */
+  background-image: url('../assets/background/Rectangle.png'); /* Background image */
   background-size: cover;
   background-position: center;
 }

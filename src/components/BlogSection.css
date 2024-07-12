@@ -1,44 +1,56 @@
+/* Wrapper for the entire blog section, centering and adding padding */
 .blog-wrapper {
   padding: 50px 20px;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  /* Wrapper for the entire blog section, centering and adding padding */
 }
 
+/* Styling for the main heading in the blog section */
 .blog-wrapper h2 {
   font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
   color: #242565;
   margin-bottom: 10px;
-  /* Styling for the main heading in the blog section */
 }
 
+/* Styling for the paragraphs in the blog section */
 .blog-wrapper p {
- 
   margin-bottom: 30px;
-  /* Styling for the paragraphs in the blog section */
 }
 
+/* Flexbox container for blog cards, allowing wrapping and centered alignment */
 .blog-list {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adjusted gap between blog cards for better spacing */
+  gap: 20px;
   padding: 20px 0;
-  flex-wrap: nowrap;
-  /* Flexbox container for blog cards, allowing wrapping and centered alignment */
+  flex-wrap: wrap; /* Changed to allow wrapping on smaller screens */
 }
 
+/* Individual blog card styling, ensuring a fixed maximum width */
 .blog-card {
   width: 100%;
   max-width: 350px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 10px; /* Adjusted margin for better spacing */
-  /* Individual blog card styling, ensuring a fixed maximum width */
+  margin: 10px;
+  transition: transform 0.3s; /* Add smooth transition for hover effect */
+  text-decoration: none; /* Ensure no underline on the entire card */
 }
 
+/* Remove underline for the Link component */
+.blog-card-link {
+  text-decoration: none;
+  color: inherit; /* Ensure the text color inherits from the parent */
+}
+
+.blog-card:hover {
+  transform: scale(1.05); /* Scale up on hover for interactivity */
+}
+
+/* Styling for the image inside the blog card, ensuring it fits well */
 .blog-image {
   width: 100%;
   height: 200px;
@@ -46,45 +58,48 @@
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
-  /* Styling for the image inside the blog card, ensuring it fits well */
 }
 
+/* Padding for the content inside the blog card */
 .blog-content {
   padding: 10px;
-  /* Padding for the content inside the blog card */
 }
 
+/* Styling for the blog title inside the card */
 .blog-title {
   font-family: 'Inter', sans-serif;
   color: #242565;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 30px */
+  line-height: 150%;
   font-size: 1.2rem;
   margin: 0;
   text-align: left;
-  /* Styling for the blog title inside the card */
+  text-decoration: none; /* Ensure no underline on the title */
 }
 
+/* Styling for the blog description inside the card */
 .blog-description {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   color: #000;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
   text-align: left;
   margin: 10px 0;
-  /* Styling for the blog description inside the card */
+  text-decoration: none; /* Ensure no underline on the description */
 }
 
+/* Styling for the meta information inside the blog card */
 .blog-meta {
   font-size: 0.8rem;
   color: #aaa;
   text-align: left;
-  /* Styling for the meta information inside the blog card */
+  text-decoration: none; /* Ensure no underline on the meta info */
 }
 
+/* Styling for the read more button */
 .read-more-button {
   padding: 10px 40px;
   font-size: 1rem;
@@ -95,5 +110,11 @@
   cursor: pointer;
   margin-top: 20px;
   display: inline-block; /* Adjust display to inline-block */
-  /* Styling for the read more button inside the blog card */
+  transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
+  text-decoration: none; /* Ensure no underline on the button text */
+}
+
+.read-more-button:hover {
+  background-color: #3D37F1;
+  color: #fff; /* Change text color on hover */
 }

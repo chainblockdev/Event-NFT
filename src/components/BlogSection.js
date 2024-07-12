@@ -1,4 +1,6 @@
+// src/components/BlogSection.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BlogSection.css';
 
 const blogs = [
@@ -31,14 +33,16 @@ const BlogSection = () => (
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <div className="blog-list">
       {blogs.map((blog, index) => (
-        <div className="blog-card" key={index}>
-          <img src={blog.image} alt={blog.title} className="blog-image" />
-          <div className="blog-content">
-            <h3 className="blog-title">{blog.title}</h3>
-            <p className="blog-description">{blog.description}</p>
-            <p className="blog-meta">{blog.date} - {blog.author}</p>
+        <Link to={`/blog/${index}`} key={index} className="blog-card-link">
+          <div className="blog-card">
+            <img src={blog.image} alt={blog.title} className="blog-image" />
+            <div className="blog-content">
+              <h3 className="blog-title">{blog.title}</h3>
+              <p className="blog-description">{blog.description}</p>
+              <p className="blog-meta">{blog.date} - {blog.author}</p>
+            </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
     <button className="read-more-button">Leggi tutto</button>
