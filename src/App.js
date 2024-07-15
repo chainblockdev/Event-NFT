@@ -15,7 +15,7 @@ import CartPage from './components/CartPage';
 import Wishlist from './components/Wishlist';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
-import BlogDetails from './components/BlogDetails'; // Import BlogDetails component
+import BlogDetails from './components/BlogDetails';
 import './App.css';
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
           <Route path="/profile" element={<Wishlist />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signout" element={<SignOut />} />
-          <Route path="/BlogSection/:id" element={<BlogDetails />} /> {/* Add route for BlogDetails */}
+          <Route path="/blog" element={<BlogDetails />} /> {/* Static route for BlogDetails */}
         </Routes>
       </div>
     </Router>

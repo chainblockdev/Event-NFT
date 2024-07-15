@@ -37,11 +37,19 @@ html, body {
 
 /* Logo image styling */
 .logo-imgEventDetail {
-  width: 150px;
+  width: 200px;
   height: auto;
   padding: 10px 0;
   margin-left: 10px;
 }
+/* SVG Icon styling */
+.nav-icon svg {
+  width: 24px;
+  height: 24px;
+ 
+  cursor: pointer;
+}
+
 
 /* Navigation links container */
 .nav-linksEventDetail {
@@ -78,16 +86,17 @@ html, body {
 /* Wallet button in the nav bar */
 .nav-barEventDetail .wallet-buttonEventDetail {
   padding: 10px 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  flex-shrink: 0;
-  background-color: transparent;
-  color: #FFF;
-  border-radius: 50px;
-  border: 1.5px solid #FFF;
-  cursor: pointer;
-  box-shadow: none;
-  transition: background-color 0.3s, color 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    flex-shrink: 0;
+    background-color: #242565;
+    color: #FFF;
+    border-radius: 50px;
+    border: 1.5px solid #FFF;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
 
 }
 
@@ -427,10 +436,10 @@ html, body {
 /* Title of the related section */
 .related-title-MateraEvents {
   font-family: 'Inter', sans-serif;
-  font-size: 2rem; /* Font size of the title */
+  font-size: 30px; /* Font size of the title */
   color: #242565; /* Dark blue color */
   margin-bottom: 30px; /* Space below the title */
-  margin-right: 38%;
+  margin-right: 460px;
 }
 
 /* Container for the related cards */

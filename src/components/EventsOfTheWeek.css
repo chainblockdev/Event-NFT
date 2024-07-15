@@ -20,7 +20,7 @@
   position: absolute;
   font-weight: 700;
   top: -20px;
-  left: 150px;
+  left: 240px;
   z-index: 10;
   color: #242565;
 }
@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  width: 990px;
+  width: 970px;
   background-color: #ddd; /* Line color */
   margin-top: 20px; /* Space between the title and the line */
 }

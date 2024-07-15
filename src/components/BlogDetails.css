@@ -1,0 +1,401 @@
+/* Navbar container */
+.BlogDetails-navbar {
+    display: flex;
+    padding: 40px 5%;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Logo styling */
+.BlogDetails-logo {
+    display: flex;
+    align-items: center;
+}
+
+.BlogDetails-logo img {
+    height: 40px;
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.BlogDetails-logo span {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin-left: 10px; /* Adjust spacing between logo and text */
+}
+
+/* Navbar links */
+.BlogDetails-nav-links {
+    display: flex;
+    gap: 50px; /* Adjust gap as needed */
+}
+
+.BlogDetails-nav-links a,
+.BlogDetails-nav-links span {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Wallet button */
+.BlogDetails-wallet-button {
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    flex-shrink: 0;
+    background-color: #242565;
+    color: #FFF;
+    border-radius: 50px;
+    border: 1.5px solid #FFF;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+/* Icons container */
+.BlogDetails-icons {
+    display: flex; 
+    gap: 40px;
+}
+
+/* Styling for the cart icon button */
+.BlogDetails-icons .cart-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Styling for the profile icon button */
+.BlogDetails-icons .profile-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* Container for the blog section */
+.BlogDetails-blog-header-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Overlay to darken the background image for better text readability */
+.BlogDetails-blog-header-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Content inside the blog header container */
+.BlogDetails-blog-header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.BlogDetails-blog-header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.BlogDetails-blog-header-content p {
+    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0;
+}
+
+/* Blog content meta information */
+.BlogDetails-blog-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* General blog content styling */
+.BlogDetails-blog-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Filter container */
+.BlogDetails-blog-filter-container {
+    display: flex;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 20px; /* Adjust top padding if needed */
+    padding-right: 20px;
+    position: absolute;
+    right: 190px;
+    top: 20px;
+    z-index: 10;
+}
+
+.BlogDetails-blog-filter-container img {
+    margin-right: 10px; /* Ensure the icon is first by adjusting margin-right */
+    height: 20px;
+    cursor: pointer;
+}
+
+
+/* Blog list */
+.BlogDetails-blog-blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 50px 0;
+    background: #242565;
+    padding: 20px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Blog card link styling */
+.BlogDetails-blog-blog-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Blog card styling */
+.BlogDetails-blog-blog-card {
+    background: #242565;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Blog card image styling */
+.BlogDetails-blog-blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Blog card content styling */
+.BlogDetails-blog-blog-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Blog title styling */
+.BlogDetails-blog-blog-title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    color: #F5167E;
+    border: none; /* Ensure no border is applied */
+}
+
+/* Blog description styling */
+.BlogDetails-blog-blog-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+    margin: 10px 0;
+    text-decoration: none;
+    flex-grow: 1;
+    color: #fff;
+    border: none; /* Ensure no border is applied */
+}
+
+/* Blog meta information styling */
+.BlogDetails-blog-blog-meta {
+    font-size: 0.8rem;
+    color: #A5A5A5;
+    text-align: left;
+    text-decoration: none;
+    border: none; /* Ensure no border is applied */
+}
+
+/* Ensure the blog list container is properly spaced */
+.BlogDetails-blog-content-container {
+    padding: 40px 20px;
+    background-color: #242565;
+    position: relative;
+}
+
+/* Styling for the read more button to align with the background */
+.BlogDetails-blog-read-more-button {
+    display: block;
+    color: #F5167E; /* Adjust text color to match the image */
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px; /* Adjust font size to match the image */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 21.6px */
+    background-color: transparent; /* Ensure background color is transparent */
+    border: none; /* Remove any border */
+    cursor: pointer;
+    margin: 40px auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Hover effect for the read more button */
+.BlogDetails-blog-read-more-button:hover {
+    color: #FF408E; /* Change text color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Hide heart and search buttons within the BlogDetails page */
+.no-icons .heart-button,
+.no-icons .search-button {
+    display: none !important;
+}
+
+/* New container styling */
+.searchbar-blogdetails-blog {
+    background-color: #022E57;
+    padding: 20px 3%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 20px; /* This margin ensures gap above the container */
+    width: 80%;
+    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
+    position: relative; /* Changed from absolute to relative to ensure proper positioning */
+    margin-bottom: 40px; /* Added margin-bottom to ensure gap below */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.searchbar-blogdetails-blog-item {
+    flex: 1;
+    text-align:left;
+    position: relative; /* Necessary for positioning the underline */
+}
+
+.searchbar-blogdetails-blog-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px;
+    border: none;
+    background-color: #022E57;
+    color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+.searchbar-blogdetails-blog-item p:first-child {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    display: block;
+}
+
+.searchbar-blogdetails-blog-item p:last-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative; /* Necessary for positioning the underline */
+}
+
+.searchbar-blogdetails-blog-item .underline {
+    width: 80%; /* Adjust width as needed */
+    height: 1px;
+    background-color: #7778B0;
+    position: absolute;
+    bottom: -5px; /* Adjust position as needed */
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.searchbar-blogdetails-blog-item .date-with-icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.searchbar-blogdetails-blog-item .date-with-icon svg {
+    margin-left: 150px; /* Adjust spacing as needed */
+}
+
+/* src/components/WalletSection.css */
+.WalletSection-container {
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Example centering */
+  }
+  
+  .WalletSection-container h2 {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #333;
+  }
+  

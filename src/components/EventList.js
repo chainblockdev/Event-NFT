@@ -68,7 +68,14 @@ const EventList = () => (
     <div className="event-list">
       {events.map((event, index) => (
         <Link to={`/event/${index}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
-          <EventCard image={event.image} title={event.title} date={event.date} description={event.description} width={event.width} height={event.height} />
+          <EventCard
+            image={event.image}
+            title={event.title}
+            date={event.date}
+            description={event.description}
+            width={event.width}
+            height={event.height}
+          />
         </Link>
       ))}
     </div>

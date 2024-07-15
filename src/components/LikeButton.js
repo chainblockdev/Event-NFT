@@ -1,3 +1,4 @@
+// src/components/LikeButton.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LikeButton.css';
@@ -12,7 +13,7 @@ const LikeButton = () => {
     e.preventDefault();
     setLiked(!liked);
     console.log('Heart button clicked'); // Debugging log
-    navigate('/liked'); // Navigate to the liked page
+    navigate('/profile'); // Navigate to the Wishlist page
   };
 
   const handleIconClick = (e) => {

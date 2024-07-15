@@ -92,6 +92,7 @@
     text-align: center;
     padding: 30px 0;
     margin-top: 50px;
+    margin-right: 1100px; /* Adjust this value as needed */
 }
 
 /* Cart header title styles */
@@ -102,8 +103,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-right: 950px;
 }
+
 
 /* Main content container styles */
 .best-event-cart-page-main {
@@ -335,8 +336,8 @@
     background-color: #F5167E;
     position: absolute;
     top: 20px;
-    left: 80px;
-    bottom: -2px; /* Adjust as needed to position the line */
+    left: 90px;
+    bottom: -5px; /* Adjust as needed to position the line */
 }
 
 /* Event list section container */

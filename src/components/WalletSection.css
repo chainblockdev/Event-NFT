@@ -3,6 +3,7 @@
   justify-content: center; /* Centers the content horizontally within the section */
   padding: 100px 0px; /* Adds 100px padding on the top and bottom */
   text-align: center; /* Centers the text within the section */
+  padding-bottom: 40px; /* Alternatively, you can use padding-top if you prefer */
 }
 
 .wallet-content {

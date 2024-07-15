@@ -19,24 +19,27 @@
     padding: 20px 40px;
     margin-top: -40px;
     position: relative;
+    margin-left: 140px;
     z-index: 1;
 }
 
 /* Logo container */
 .logo-containerUpcomingEvents {
     flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 /* Logo image styling */
 .logo-imgUpcomingEvents {
     width: 250px;
-    margin-right: 290px;
 }
 
 /* Navigation links container */
 .nav-linksUpcomingEvents {
     display: flex;
-    gap: 45px;
+    align-items: center;
+    gap: 65px;
 }
 
 /* Navigation link styling */
@@ -53,13 +56,12 @@
 /* Wallet button styling in background section */
 .UpcomingEvents-background .wallet-buttonUpcomingEvents {
     padding: 10px 20px;
-    margin-top: -10px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    background-color: transparent;
+    background-color: #242565;
     color: #FFF;
     border-radius: 50px;
     border: 1.5px solid #FFF;
@@ -67,12 +69,29 @@
     flex-shrink: 0;
     height: 45px;
     transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+    margin-left: 50px; /* Adjust this value to set the desired gap between the button and links */
 }
 
 /* Wallet button hover effect in background section */
 .UpcomingEvents-background .wallet-buttonUpcomingEvents:hover {
     background-color: white;
     color: #242565;
+}
+
+/* Nav icons container styling */
+.nav-iconsUpcomingEvents {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust this value to set the desired gap between icons */
+    margin-left: 30px; /* Adjust this value to set the desired gap between the button and icons */
+}
+
+/* Nav icon styling */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    gap: 45px;
 }
 
 /* Search bar styling */
@@ -114,7 +133,6 @@
 .search-selectUpcomingEvents {
     padding: 10px;
     font-size: 1.25rem; /* Increased font size to match the image */
- 
     border: none;
     background-color: transparent; /* Makes the background transparent */
     color: white; /* Sets the text color to white */
@@ -258,7 +276,6 @@
     background-color: #3A3B7433; /* Third dot color */
 }
 
-
 /* Hover effect for dots */
 .dotUpcomingEvents:hover {
     background-color: #555; /* Optional hover color */
@@ -324,8 +341,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
+    margin-left: 200px;
 }
 
 /* Individual concert card styling */
@@ -333,10 +349,10 @@
     display: flex;
     background: white;
     overflow: hidden;
-    width: 80%;
-    max-width: 800px;
+   
     padding: 20px;
     align-items: center;
+    margin-right: 60px;
 }
 
 /* Faded concert card styling */
@@ -346,14 +362,14 @@
 
 /* Concert card image styling */
 .concert-cardUpcomingEvents img {
-    width: 80px;
-    height: 80px;
     border-radius: 20px;
     margin-right: 20px;
     object-fit: cover;
     width: 133px;
     height: 135.512px;
     flex-shrink: 0;
+   
+
 }
 
 /* Concert card content styling */
@@ -386,6 +402,7 @@
     font-weight: 700;
     line-height: normal;
     margin-bottom: 5px;
+    
 }
 
 /* Concert card location styling */
@@ -399,14 +416,14 @@
     margin-bottom: 10px;
 }
 
-
 /* Concert card buttons container styling */
 .concert-card-buttonsUpcomingEvents {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     gap: 10px; /* Add space between buttons */
-    margin-left: 500px;
+    margin-left:700px;
     margin-top: -85px;
+    
 }
 
 /* Details button styling */
@@ -416,14 +433,14 @@
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 21.6px */
+    line-height: 120%;
     background-color: transparent;
     color: #F5167E;
-    border: 1px solid #F5167E; /* Changed border color to match the image */
+    border: 1px solid #F5167E;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 /* Buy button styling */
@@ -438,7 +455,6 @@
     border-radius: 50px;
     border: 1px solid #F5167E;
     background: #F5167E;
-
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     text-align: center; /* Center text */
@@ -473,7 +489,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-
 }
 
 /* Purchase title styling */
@@ -487,7 +502,7 @@
     margin-bottom: 40px;
 }
 
-/* Purchase description styling - NEW */
+/* Purchase description styling */
 .purchase-descriptionUpcomingEvents {
     font-family: 'Inter', sans-serif;
     font-size: 1rem; /* Default font size, can be adjusted */
@@ -513,7 +528,7 @@
     background-color: #242565; /* Same dark blue background color */
     border-radius: 20px; /* Rounded corners */
     padding: 20px; /* Padding inside the card */
-    width: 342px;/* Fixed width for each card */
+    width: 342px; /* Fixed width for each card */
     height: 300px;
     font-size: 12px;
     font-weight: 10px;
@@ -528,10 +543,9 @@
 
 /* Hover effect for cards */
 .purchase-stepUpcomingEvents:hover {
-  transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Lift and tilt the card on hover */
-  box-shadow: 0px 20px 60px 0px rgba(61, 55, 241, 0.35); /* Enhanced shadow on hover for more depth */
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Lift and tilt the card on hover */
+    box-shadow: 0px 20px 60px 0px rgba(61, 55, 241, 0.35); /* Enhanced shadow on hover for more depth */
 }
-
 
 /* Purchase step icon styling */
 .purchase-iconUpcomingEvents {
@@ -593,8 +607,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    border-radius: 50px;
-    opacity: 0.9;
     background: #242565;
     color: #FFF;
     text-align: center;
@@ -602,7 +614,6 @@
     width: 182px;
     height: 60px;
     flex-shrink: 0;
- 
 }
 
 /* Wallet button hover effect */
@@ -611,82 +622,10 @@
     color: #1a1a3d;
 }
 
-/* Wallet prompt container styling */
-.wallet-prompt-containerUpcomingEvents {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wallet-section {
+    margin-top: 70px; /* Adjust this value as needed */
 }
 
-/* Wallet prompt content styling */
-.wallet-prompt-contentUpcomingEvents {
-  display: flex; /* Enables flexbox layout for the container */
-  align-items: center; /* Centers items vertically within the container */
-  justify-content: center; /* Centers items horizontally within the container */
-  background-color: #EEE1FF;; /* Light purple background color */
-  padding: 50px 20px; /* Adds padding of 50px on the top and bottom, and 20px on the left and right */
-  text-align: center; /* Centers the text within the container */
-  margin: 50px auto; /* Adds a top margin of 50px and centers the container */
-  width: 1000px;
-  height: 150px;
-  flex-shrink: 0;
-}
-
-/* Wallet prompt image styling */
-.wallet-prompt-imageUpcomingEvents {
-    max-width: 600px; /* Set a max width for the wallet image */
-    margin-right: 30px;
- 
-}
-
-/* Wallet prompt text container styling */
-.wallet-prompt-textUpcomingEvents {
-    flex: 1;
-    text-align: left;
-}
-
-/* Wallet prompt heading styling */
-.wallet-prompt-textUpcomingEvents h3 {
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-bottom: 10px;
-}
-
-/* Wallet prompt paragraph styling */
-.wallet-prompt-textUpcomingEvents p {
-    margin-bottom: 20px;
-    color: #272727;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-/* Wallet prompt button styling */
-.wallet-prompt-buttonUpcomingEvents {
-    padding: 10px 20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    background-color: #f5167e; /* Button background color */
-    box-shadow: 0px 10px 50px 0px rgba(61, 55, 241, 0.25);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-/* Wallet prompt button hover effect */
-.wallet-prompt-buttonUpcomingEvents:hover {
-    background-color: #ff4d94;
-}
 
 /* Upcoming events container styling */
 .upcoming-events-containerUpcomingEvents {
@@ -759,11 +698,9 @@
     position: absolute;
     right: 10px; /* Position the icon inside the button */
     top: 50%;
-    padding-right: -10% ;
     transform: translateY(-50%); /* Center the icon vertically */
     pointer-events: none; /* Ensure the icon does not block button clicks */
 }
-
 
 /* Filter button hover effect */
 .filter-buttonUpcomingEvents:hover {
@@ -783,19 +720,19 @@
 .event-cardUpcomingEvents, .upcoming-event-cardUpcomingEvents {
     text-decoration: none; /* Remove underline from the entire card */
     color: inherit; /* Ensure the text color remains unchanged */
-  }
-  
-  .event-cardUpcomingEvents .event-card-textUpcomingEvents a,
-  .event-cardUpcomingEvents .event-card-titleUpcomingEvents a,
-  .event-cardUpcomingEvents .event-card-descriptionUpcomingEvents a,
-  .event-cardUpcomingEvents .event-card-dateUpcomingEvents span a,
-  .upcoming-event-cardUpcomingEvents .upcoming-event-card-titleUpcomingEvents a,
-  .upcoming-event-cardUpcomingEvents .upcoming-event-card-descriptionUpcomingEvents a,
-  .upcoming-event-cardUpcomingEvents .upcoming-event-card-dateUpcomingEvents span a {
+}
+
+.event-cardUpcomingEvents .event-card-textUpcomingEvents a,
+.event-cardUpcomingEvents .event-card-titleUpcomingEvents a,
+.event-cardUpcomingEvents .event-card-descriptionUpcomingEvents a,
+.event-cardUpcomingEvents .event-card-dateUpcomingEvents span a,
+.upcoming-event-cardUpcomingEvents .upcoming-event-card-titleUpcomingEvents a,
+.upcoming-event-cardUpcomingEvents .upcoming-event-card-descriptionUpcomingEvents a,
+.upcoming-event-cardUpcomingEvents .upcoming-event-card-dateUpcomingEvents span a {
     text-decoration: none; /* Remove underline from the text inside the card */
     color: inherit; /* Ensure the text color remains unchanged */
-  }
-  
+}
+
 /* Upcoming event cards container styling */
 .upcoming-event-cardsUpcomingEvents {
     display: flex;
@@ -860,7 +797,6 @@
     color: #242565;
     margin-top: -60px;
     margin-left: 90px;
- 
 }
 
 /* Upcoming event card description styling */
@@ -894,7 +830,6 @@
     right: 10px; /* Position from the right of the parent container */
     display: flex; /* Use flexbox for layout */
     gap: 8px; /* Space between buttons */
-
 }
 
 /* This styles each individual button inside the container */
@@ -925,7 +860,6 @@
     height: 20px; /* Set height of the image */
 }
 
-
 /* Show more button styling */
 .upcoming-events-show-moreUpcomingEvents {
     margin-top: 20px;
@@ -949,3 +883,48 @@
     background-color: #4946a3;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-barUpcomingEvents {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-linksUpcomingEvents {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-barUpcomingEvents {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .events-titleUpcomingEvents {
+        margin-left: 0;
+    }
+
+    .concerts-titleUpcomingEvents {
+        margin-left: 0;
+    }
+
+    .concert-card-buttonsUpcomingEvents {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .purchase-stepsUpcomingEvents {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .purchase-stepUpcomingEvents {
+        width: 100%;
+        max-width: 342px;
+    }
+
+    .upcoming-event-card-contentUpcomingEvents {
+        width: 100%;
+    }
+}

@@ -1,91 +1,88 @@
 /* src/components/SignIn.css */
 
 .sign-in-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  .sign-in-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
-  
-  .sign-in-header {
-    margin-bottom: 2rem;
-  }
-  
-  .sign-in-icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto 1rem;
-  }
-  
-  .sign-in-icon img.lock-icon {
-    width: 100%;
-    height: auto;
-  }
-  
-  .sign-in-form .form-group {
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .sign-in-form .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .sign-in-form .form-group input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .sign-in-form .form-group.remember-me {
-    display: flex;
-    align-items: center;
-  }
-  
-  .sign-in-form .form-group.remember-me input {
-    width: auto;
-    margin-right: 0.5rem;
-  }
-  
-  .btn-primary {
-    background-color: #1976d2;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .btn-primary:hover {
-    background-color: #155a9e;
-  }
-  
-  .sign-in-links {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .sign-in-links a {
-    color: #1976d2;
-    text-decoration: none;
-  }
-  
-  .sign-in-links a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.sign-in-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.sign-in-header {
+  margin-bottom: 1.5rem;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.sign-in-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.sign-in-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.sign-in-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.sign-in-form input[type="email"],
+.sign-in-form input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.form-group.remember-me input {
+  margin-right: 0.5rem;
+  transform: translateY(2px); /* Adjust this value if needed to align with the text */
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sign-in-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.sign-in-links a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
