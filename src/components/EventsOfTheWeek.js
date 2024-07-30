@@ -5,23 +5,23 @@ import LikeButton from './LikeButton'; // Import the LikeButton component
 
 const events = [
   {
-    id: 1, // Add an ID to each event
-    image: './image1.jpg',
+    id: 1,
+    image: './image1.jpg', // Ensure these paths are correct
     title: 'Matera Film Festival',
     date: '14 Giu',
     description: "Scopri un'esperienza unica con esibizioni artistiche, workshop e incontri con autori di fama internazionale."
   },
   {
-    id: 2, // Add an ID to each event
-    image: './image2.jpg',
+    id: 2,
+    image: './image2.jpg', // Ensure these paths are correct
     title: 'Concerto sotto le stelle',
     date: '20 Lug',
     description: "Vivi una serata magica con un concerto all'aperto nelle suggestive cornici dei Sassi."
   },
   {
-    id: 3, // Add an ID to each event
-    image: './image3.jpg',
-    title: "Mostra d'Arte Contemporanea", // Use double quotes or escape single quote
+    id: 3,
+    image: './image3.jpg', // Ensure these paths are correct
+    title: "Mostra d'Arte Contemporanea",
     date: '18 Ago',
     description: 'Esplora le opere di artisti emergenti e affermati in una mostra innovativa.'
   },
@@ -42,10 +42,16 @@ const EventsOfTheWeek = () => {
     <section className="events-week-wrapper">
       <div className="events-week-title">Eventi della Settimana</div>
       <div className="events-week-carousel">
-        <button className="carousel-week-button left" onClick={handleLeftClick}>&lt;</button>
-        <div className="events-week-list" style={{ transform: `translateX(-${currentIndex * 320}px)` }}>
+        <button
+          className="carousel-week-button left"
+          onClick={handleLeftClick}
+          aria-label="Previous Event"
+        >
+          &lt;
+        </button>
+        <div className="events-week-list" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {events.map((event, index) => (
-            <Link to={`/event/${event.id}`} key={index} className="event-week-card-link"> {/* Wrap event card with Link */}
+            <Link to={`/event/${event.id}`} key={index} className="event-week-card-link">
               <div className="event-week-card">
                 <img src={event.image} alt={event.title} className="event-week-image" />
                 <div className="event-week-card-content">
@@ -61,13 +67,19 @@ const EventsOfTheWeek = () => {
                   </div>
                 </div>
                 <div className="event-week-card-icons">
-                  <LikeButton /> {/* Replace static heart icon with LikeButton component */}
+                  <LikeButton />
                 </div>
               </div>
             </Link>
           ))}
         </div>
-        <button className="carousel-week-button right" onClick={handleRightClick}>&gt;</button>
+        <button
+          className="carousel-week-button right"
+          onClick={handleRightClick}
+          aria-label="Next Event"
+        >
+          &gt;
+        </button>
       </div>
       <div className="carousel-week-indicators">
         {events.map((_, index) => (
@@ -75,6 +87,14 @@ const EventsOfTheWeek = () => {
             key={index}
             className={`indicator ${index === currentIndex ? 'active' : ''}`}
             onClick={() => setCurrentIndex(index)}
+            role="button"
+            tabIndex="0"
+            aria-label={`Go to event ${index + 1}`}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                setCurrentIndex(index);
+              }
+            }}
           ></span>
         ))}
       </div>

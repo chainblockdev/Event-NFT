@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import EventList from './components/EventList';
@@ -16,17 +16,21 @@ import Wishlist from './components/Wishlist';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
 import BlogDetails from './components/BlogDetails';
+import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
 import './App.css';
 
 function App() {
+  const eventListRef = useRef(null);
+
   return (
     <Router>
+      <ScrollToTop /> {/* Use ScrollToTop component */}
       <div className="App">
         <Routes>
           <Route path="/" element={
             <>
-              <HeroSection />
-              <EventList />
+              <HeroSection eventListRef={eventListRef} />
+              <EventList eventListRef={eventListRef} />
               <TicketPurchase />
               <WalletSection />
               <EventsOfTheWeek />
@@ -37,11 +41,11 @@ function App() {
           } />
           <Route path="/event/:id" element={<MateraEvents />} />
           <Route path="/upcomingevents" element={<UpcomingEvents />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart" element={<CartPage eventListRef={eventListRef} />} />
           <Route path="/profile" element={<Wishlist />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signout" element={<SignOut />} />
-          <Route path="/blog" element={<BlogDetails />} /> {/* Static route for BlogDetails */}
+          <Route path="/blog" element={<BlogDetails />} />
         </Routes>
       </div>
     </Router>

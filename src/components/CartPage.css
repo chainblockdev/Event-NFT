@@ -105,7 +105,6 @@
     line-height: normal;
 }
 
-
 /* Main content container styles */
 .best-event-cart-page-main {
     display: flex;
@@ -180,8 +179,8 @@
 
 .best-event-cart-page-item-details p {
     font-size: 0.9rem;
-    color: #bbb;
-    margin-right: 80px;
+    color: #fff;
+    margin-right: 60px;
 }
 
 /* Cart item price styles */
@@ -257,7 +256,7 @@
     font-weight: 700;
     line-height: 120%; /* 31.2px */
     color: #F5167E;
-    margin-right: 150px;
+    margin-right: 170px;
 }
 
 /* Wallet section styles for the CartPage */
@@ -288,7 +287,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 1rem;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 /* Order summary separator styles */
@@ -320,24 +319,31 @@
 }
 
 /* Back to events link styles */
+/* Back to events link styles */
+/* Back to events link styles */
 .best-event-cart-page-back-to-events {
     color: #F5167E;
     text-decoration: none;
     display: block;
     text-align: center;
-    position: relative; /* Required for the ::after pseudo-element */
+    background: transparent; /* Ensure no background */
+    border: none; /* Ensure no border */
+    font-family: 'Inter', sans-serif; /* Ensure consistent font */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Pointer cursor for button */
+    margin: 10px auto; /* Center the button and add spacing */
+    margin-top: -10px;
 }
 
 .best-event-cart-page-back-to-events::after {
     content: '';
     display: block;
-    width: 45%;
+    width: 100%; /* Full width underline */
     height: 1px;
     background-color: #F5167E;
-    position: absolute;
-    top: 20px;
-    left: 90px;
-    bottom: -5px; /* Adjust as needed to position the line */
+    position: relative;
+    top: 1px; /* Adjust position */
+    margin-top: 1px; /* Spacing between text and line */
 }
 
 /* Event list section container */
@@ -527,25 +533,6 @@
     background-color: #e01470;
 }
 
-/* Faded event item styles */
-.best-event-cart-page .best-event-faded-event {
-    opacity: 0.3;
-}
-
-/* Show more button container */
-.best-event-cart-page .best-event-show-more {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Show more button styles */
-.best-event-cart-page .best-event-show-more-button {
-    background: none;
-    border: none;
-    color: #F5167E;
-    font-size: 16px;
-    cursor: pointer;
-}
 
 /* Media query for responsive design */
 @media (max-width: 768px) {
@@ -560,24 +547,6 @@
 
   .best-event-cart-page-items,
   .best-event-cart-page-summary {
-    margin: 0 auto;
-  }
-}
-
-
-/* Media query for responsive design */
-@media (max-width: 768px) {
-  .cart-page-nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .cart-page-main {
-    flex-direction: column;
-  }
-
-  .cart-page-items,
-  .cart-page-summary {
     margin: 0 auto;
   }
 }

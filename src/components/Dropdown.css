@@ -1,0 +1,62 @@
+/* src/components/Dropdown.css */
+.dropdown {
+    position: relative;
+    font-family: var(--font-family);
+    width: 100%;
+    margin-bottom: var(--spacing-medium);
+  }
+  
+  .dropdown-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--font-color);
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .dropdown-selected {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #7778B0;
+    background-color: #242565;
+    color: var(--font-color);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .dropdown-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 13px;
+    height: 8px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none"><path d="M1.37018 1.11011L6.5083 6.11011L11.6464 1.11011" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+  }
+  
+  .dropdown-arrow.open {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #242565;
+    border: 1px solid #7778B0;
+    z-index: 3;
+  }
+  
+  .dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-option:hover {
+    background-color: var(--primary-color);
+  }
+  

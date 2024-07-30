@@ -30,6 +30,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px;
+  margin-left: 90px;
 }
 
 .wishlist-logo {
@@ -62,8 +63,7 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 10px 20px;
   cursor: pointer;
-  color: #FFF;
-  font-family: "DM Sans";
+  --font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -292,128 +292,9 @@
   padding-right: 30px; /* Add padding to ensure text doesn't overlap with arrow */
 }
 
-/* Container for the nearby events section */
-.nearbyEvents-container {
-  padding: 20px;
-  background-color: #fff; /* Background color of the section */
-}
 
-.nearbyEvents-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.nearbyEvents-header h2 {
-  font-size: 24px;
-  color: #1a1a1a; /* Dark text color */
-  margin-left: 110px;
-}
 
-.nearbyEvents-filter-icon {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: #1a1a1a; /* Dark text color */
-  margin-right: 140px;
-}
-
-.nearbyEvents-filter-icon img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
-.nearbyEvents-divider {
-  border: 0;
-  height: 1px;
-  background: #e0e0e0;
-  margin: 10px 0;
-}
-
-.nearbyEvents-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Space between event items */
-}
-
-.nearbyEvents-item {
-  display: flex;
-  align-items: center;
-  padding: 1px 100px;
-}
-
-.nearbyEvents-item img {
-  width: 133px;
-  height: 135.512px;
-  border-radius: 20px;
-  margin-right: 15px;
-}
-
-.nearbyEvents-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.nearbyEvents-details p {
-  margin: 2px 0;
-  color: #666666; /* Grey text color */
-  text-align: left; /* Align text to the left */
-}
-
-.nearbyEvents-details h3 {
-  margin: 5px 0;
-  color: #1a1a1a; /* Dark text color */
-  font-size: 18px;
-  text-align: left; /* Align text to the left */
-}
-
-.nearbyEvents-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.nearbyEvents-details-btn, .nearbyEvents-buy-now-btn {
-  padding: 10px 15px;
-  font-size: 14px;
-  border: 2px solid #ff0080;
-  border-radius: 20px;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.nearbyEvents-details-btn {
-  color: #ff0080;
-}
-
-.nearbyEvents-details-btn:hover {
-  background-color: #ff0080;
-  color: #fff;
-}
-
-.nearbyEvents-buy-now-btn {
-  background-color: #ff0080;
-  color: #fff;
-}
-
-.nearbyEvents-buy-now-btn:hover {
-  background-color: #e60073;
-}
-
-.nearbyEvents-show-more-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #ff0080;
-  border: none;
-  border-radius: 20px;
-  background-color: transparent;
-  cursor: pointer;
-  text-decoration: underline;
-}
 
 .nearbyEvents-show-more-btn:hover {
   text-decoration: none;

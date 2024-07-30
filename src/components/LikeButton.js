@@ -1,25 +1,31 @@
-// src/components/LikeButton.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LikeButton.css';
 import heartIcon from '../assets/icons/heart.png'; // Import heart icon
 import searchIcon from '../assets/icons/search.png'; // Import search icon
 
-const LikeButton = () => {
+const LikeButton = ({ onHeartClick }) => {
   const [liked, setLiked] = useState(false);
   const navigate = useNavigate();
 
   const toggleLike = (e) => {
+    e.stopPropagation(); // Stop event propagation
     e.preventDefault();
     setLiked(!liked);
     console.log('Heart button clicked'); // Debugging log
-    navigate('/profile'); // Navigate to the Wishlist page
+    if (onHeartClick) {
+      onHeartClick(e);
+    }
+    navigate('/profile'); // Navigate to profile (wishlist) page
+    window.scrollTo(0, 0); // Ensure the scroll position is set to the top
   };
 
   const handleIconClick = (e) => {
+    e.stopPropagation(); // Stop event propagation
     e.preventDefault();
-    console.log('Search button clicked, navigating to: /search'); // Debugging log
-    navigate('/search');
+    console.log('Search button clicked, navigating to: /upcomingevents'); // Debugging log
+    navigate('/upcomingevents');
+    window.scrollTo(0, 0); // Ensure the scroll position is set to the top
   };
 
   return (

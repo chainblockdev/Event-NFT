@@ -1,41 +1,49 @@
+/* Styling for the event section container */
 .event-section {
   padding: 100px 40px;
   margin-top: 50px; /* Add space between sections */
 }
 
+/* Styling for the section header containing the title and filter buttons */
 .section-header {
   display: flex;
   justify-content: space-between; /* Distribute space evenly between title and buttons */
   align-items: center; /* Vertically center the items */
   margin-bottom: 30px; /* Space between the title and event cards */
-  padding: 10px 40px; /* Adjusted size to match the design */
+  padding: 10px 75px; /* Adjusted size to match the design */
   position: relative; /* For positioning the line */
 }
 
+/* Styling for the section title */
 .section-title {
   font-family: 'Inter', sans-serif;
-  font-size: 40px;
+  font-size: 38px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #242565;
   margin: 0;
-  padding-right: 50px; /* Adjust padding to move the title slightly to the right */
-  text-align: left; /* Align text to the left */
+  margin-left: 40px; /* Reduced margin to move the title closer to the buttons */
+  text-align: start; /* Align text to the left */
 }
 
+/* Container for filter buttons */
 .filter-buttons {
   display: flex;
-  gap: 18px; /* Space between buttons */
+  gap: 10px; /* Reduced space between buttons */
   justify-content: flex-start;
   margin-top: 0; /* Reduced margin for closer spacing */
-  margin-right: 45px;
+  margin-right: 5px;
 }
 
+/* General styling for each filter button */
 .filter-button {
+  width: 130px;
+  height: 40px;
+  flex-shrink: 0;
   padding: 10px 20px;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 15px;
   background-color: #F2F4FF;
   color: #1D275F;
   border: 1px solid #F2F4FF;
@@ -43,50 +51,75 @@
   cursor: pointer;
   display: flex; /* Flex display to align text and icon */
   align-items: center; /* Center align text and icon */
+  justify-content: space-between; /* Add space between text and icon */
   position: relative; /* To position the icon absolutely within the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
 }
 
-.filter-button::after {
-  content: '';
-  width: 13px; /* Width of the SVG */
-  height: 6px; /* Height of the SVG */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none"><path d="M1.33942 1.5L6.33942 6.5L11.3394 1.5" stroke="%231D275F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  right: 2px; /* Adjust as needed to position the icon */
+/* Styling for the SVG icon inside each filter button */
+.filter-button svg {
+  margin-left: 8px; /* Adjust margin as needed */
 }
 
+/* Hover effect for filter buttons */
 .filter-button:hover {
   background-color: #F0F0F0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
 }
 
+/* Active state for filter buttons (when clicked) */
+.filter-button:active {
+  background-color: #DDE2FF;
+  transform: translateY(2px); /* Button appears pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shallower shadow on press */
+}
+
+/* Additional styling for the currently active filter button */
+.filter-button.active {
+  background-color: #DDE2FF; /* Active button background color */
+}
+
+/* Decorative line below the section header */
 .section-header::after {
   content: '';
   position: absolute;
   bottom: -10px; /* Adjust as needed */
   left: 0;
-  right: 0;
+  margin-left: 100px;
   height: 1px;
+  width: 1150px;
   background-color: #ddd; /* Line color */
 }
 
+/* Styling for the event list container */
 .event-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: stretch;
+  justify-content: space-between; /* Distribute space evenly */
   align-items: center;
-  gap: 0px; /* Adjust the gap to a smaller value */
+  gap: 10px 0px; /* Vertical gap and zero horizontal gap */
+  padding: 0 20px; /* Reduce padding to bring cards closer */
+  margin-left: 80px;
+}
+
+/* Adjust the grid layout for smaller screens */
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
 }
 
 /* Ensure the event card has minimal margin and padding */
 .event-card {
-  margin: 5px; /* Remove any margin around the cards */
+  margin: 0; /* Remove any margin around the cards */
   padding: 0; /* Remove any padding around the cards */
+  border: 1px solid #e0e0e0; /* Optional: Add a border to define card edges */
+  border-radius: 10px; /* Optional: Add border-radius for smoother edges */
 }
 
-
-
+/* General styling for the "Load More" button */
 .load-more-button {
   width: 182px;
   height: 60px;
@@ -102,6 +135,18 @@
   margin-top: 40px;
   text-align: center;
   display: block; /* Make the button take up its own line */
-  margin-left: 550px; /* Center the button */
-  margin-right: 50px; /* Center the button */
+  margin-left: auto; /* Center the button */
+  margin-right: auto; /* Center the button */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+/* Hover effect for the "Load More" button */
+.load-more-button:hover {
+  box-shadow: 0 12px 52px rgba(61, 55, 241, 0.35); /* Deeper shadow on hover */
+}
+
+/* Active state for the "Load More" button (when clicked) */
+.load-more-button:active {
+  transform: translateY(2px); /* Button appears pressed */
+  box-shadow: 0 8px 30px rgba(61, 55, 241, 0.45); /* Shallower shadow on press */
 }

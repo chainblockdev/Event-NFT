@@ -316,6 +316,7 @@ html, body {
   width: 100%;
   height: auto;
   margin-top: 20px;
+  margin-bottom: 40px;
   border-radius: 10px;
   max-width: 1000px;
   margin-left: auto;
@@ -512,8 +513,8 @@ html, body {
 /* Styling for the card title */
 .related-card-title-MateraEvents {
   color: #000;
-  font-family: "DM Sans";
-  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 24px */

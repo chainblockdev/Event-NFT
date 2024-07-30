@@ -1,13 +1,16 @@
-// src/components/HeroSection.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 import logo from '../assets/icons/Logo.png';
 import cartIcon from '../assets/icons/cart.jpg';
 import profileIcon from '../assets/icons/profile.jpg';
+import SearchBar from './SearchBar';
 
-const HeroSection = () => {
+const HeroSection = ({ eventListRef }) => {
   const navigate = useNavigate();
+  const [eventType, setEventType] = useState('Concerto Jazz');
+  const [location, setLocation] = useState('Sassi di Matera');
+  const [date, setDate] = useState('Luglio');
 
   const handleCartClick = () => {
     navigate('/cart');
@@ -18,7 +21,15 @@ const HeroSection = () => {
   };
 
   const handleAcquistaClick = () => {
-    navigate('/cart');
+    if (eventListRef && eventListRef.current) {
+      eventListRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleScopriClick = () => {
+    if (eventListRef && eventListRef.current) {
+      eventListRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -49,32 +60,17 @@ const HeroSection = () => {
         </p>
         <div className="hero-buttons">
           <button className="hero-button primary" aria-label="Purchase Tickets" onClick={handleAcquistaClick}>Acquista</button>
-          <button className="hero-button" aria-label="Discover More">Scopri</button>
+          <button className="hero-button" aria-label="Discover More" onClick={handleScopriClick}>Scopri</button>
         </div>
       </div>
-      <div className="search-bar">
-        <div className="search-select-container">
-          <label htmlFor="event-type" className="search-select-label">Tipo di Evento</label>
-          <select id="event-type" className="search-select">
-            <option>Concerto Jazz</option>
-            {/* Add other event types here */}
-          </select>
-        </div>
-        <div className="search-select-container">
-          <label htmlFor="location" className="search-select-label">Luogo</label>
-          <select id="location" className="search-select">
-            <option>Sassi di Matera</option>
-            {/* Add other locations here */}
-          </select>
-        </div>
-        <div className="search-select-container">
-          <label htmlFor="date" className="search-select-label">Data</label>
-          <select id="date" className="search-select">
-            <option>Luglio</option>
-            {/* Add other dates here */}
-          </select>
-        </div>
-      </div>
+      <SearchBar
+        eventType={eventType}
+        location={location}
+        date={date}
+        setEventType={setEventType}
+        setLocation={setLocation}
+        setDate={setDate}
+      />
     </section>
   );
 };

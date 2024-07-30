@@ -36,19 +36,19 @@ const BlogSection = () => (
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <div className="blog-list">
       {blogs.map((blog) => (
-        <Link to="/blog" key={blog.id} className="blog-card-link">
-          <div className="blog-card">
-            <img src={blog.image} alt={blog.title} className="blog-image" />
-            <div className="blog-content">
-              <h3 className="blog-title">{blog.title}</h3>
-              <p className="blog-description">{blog.description}</p>
-              <p className="blog-meta">{blog.date} - {blog.author}</p>
-            </div>
+        <div className="blog-card" key={blog.id}>
+          <img src={blog.image} alt={blog.title} className="blog-image" />
+          <div className="blog-content">
+            <h3 className="blog-title">{blog.title}</h3>
+            <p className="blog-description">{blog.description}</p>
+            <p className="blog-meta">{blog.date} - {blog.author}</p>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
-    <button className="read-more-button">Leggi tutto</button>
+    <Link to="/blog">
+      <button className="read-more-button">Leggi tutto</button>
+    </Link>
   </section>
 );
 

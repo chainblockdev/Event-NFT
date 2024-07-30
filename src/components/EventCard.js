@@ -3,7 +3,7 @@ import React from 'react';
 import './EventCard.css';
 import LikeButton from './LikeButton'; // Import the LikeButton component
 
-const EventCard = ({ image, title, date, description, width, height }) => (
+const EventCard = ({ image, title, date, description, width, height, onHeartClick }) => (
   <div className="event-card" style={{ width, height }}>
     <img src={image} alt={title} className="event-card-image" />
     <div className="event-card-content">
@@ -16,8 +16,8 @@ const EventCard = ({ image, title, date, description, width, height }) => (
         <p className="event-card-description">{description}</p>
       </div>
       <div className="event-card-icons">
-              <LikeButton /> {/* Replace static heart icon with LikeButton component */}
-            </div>
+        <LikeButton onHeartClick={onHeartClick} /> {/* Pass onHeartClick to LikeButton */}
+      </div>
     </div>
   </div>
 );
