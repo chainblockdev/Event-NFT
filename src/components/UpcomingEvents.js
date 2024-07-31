@@ -1,15 +1,14 @@
-// src/components/UpcomingEvents.js
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import FooterSection from './FooterSection'; // Import the FooterSection component
-import EventList from './EventList'; // Import the EventList component
-import WalletSection from './WalletSection'; // Import the WalletSection component
-import TicketPurchase from './TicketPurchase'; // Import the TicketPurchase component
-import ConcertsSection from './ConcertsSection'; // Import the ConcertsSection component
-import SearchBar from './SearchBar'; // Import the SearchBar component
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import FooterSection from './FooterSection';
+import EventList from './EventList';
+import WalletSection from './WalletSection';
+import TicketPurchase from './TicketPurchase';
+import ConcertsSection from './ConcertsSection';
+import SearchBar from './SearchBar';
 import './UpcomingEvents.css';
-import logo from './Logo.png'; // Adjust the import path as needed
-import backgroundImage from '../assets/background/unsplash.png'; // Import your background image
+import logo from './Logo.png';
+import backgroundImage from '../assets/background/unsplash.png';
 
 import image1 from '../assets/event/image1.jpg';
 import image2 from '../assets/event/image2.jpg';
@@ -17,12 +16,19 @@ import image3 from '../assets/event/image3.jpg';
 
 const UpcomingEvents = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const eventListRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;  // for Safari
-  }, []);
+    if (location.hash === '#eventList') {
+      setTimeout(() => {
+        if (eventListRef.current) {
+          eventListRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const eventsOfTheWeek = [
     {
@@ -48,6 +54,10 @@ const UpcomingEvents = () => {
     },
   ];
 
+  const handleBackToEvents = () => {
+    navigate('/#eventList');
+  };
+
   return (
     <div>
       <div className="UpcomingEvents-background" style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -57,7 +67,7 @@ const UpcomingEvents = () => {
           </div>
           <div className="nav-linksUpcomingEvents">
             <Link className="nav-linkUpcomingEvents" to="/upcomingevents">Eventi</Link>
-            <a className="nav-linkUpcomingEvents" href="#Luogo">Acquista</a>
+            <button className="nav-linkUpcomingEvents" onClick={handleBackToEvents}>Acquista</button>
             <a className="nav-linkUpcomingEvents" href="#Data">Ticket</a>
             <button className="wallet-buttonUpcomingEvents" aria-label="Connect Wallet">Connetti Wallet</button>
             <div className="nav-iconsUpcomingEvents">
@@ -81,7 +91,7 @@ const UpcomingEvents = () => {
       <SearchBar /> {/* Use the SearchBar component here */}
 
       <div className="events-containerUpcomingEvents">
-        <h2 className="events-titleUpcomingEvents">Gli Eventi della Settimana</h2>
+        <h2 id="eventList" className="events-titleUpcomingEvents">Prossimi Eventi</h2> {/* Add the id here */}
         <div className="event-cardsUpcomingEvents">
           {eventsOfTheWeek.map((event) => (
             <Link key={event.id} to={`/event/${event.id}`} className="event-cardUpcomingEvents">
@@ -109,7 +119,9 @@ const UpcomingEvents = () => {
       <ConcertsSection /> {/* Add the ConcertsSection component here */}
       <TicketPurchase /> {/* Add the TicketPurchase component here */}
       <WalletSection />
-      <EventList />
+      <div>
+        <EventList />
+      </div>
       <FooterSection />
     </div>
   );

@@ -15,20 +15,17 @@ const CartPage = ({ eventListRef }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
 
   if (!event) {
     return <div>No event in cart</div>; // Handle case where no event is passed
   }
 
   const handleIncrease = () => {
-    setQuantity(quantity + 1);
+    setQuantity(prevQuantity => prevQuantity + 1);
   };
 
   const handleDecrease = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
+    setQuantity(prevQuantity => Math.max(prevQuantity - 1, 0));
   };
 
   const handleRemove = () => {
@@ -42,6 +39,10 @@ const CartPage = ({ eventListRef }) => {
         eventListRef.current.scrollIntoView({ behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  const handlePreventDefault = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -63,10 +64,10 @@ const CartPage = ({ eventListRef }) => {
           <a className="best-event-cart-page-nav-link" href="#acquista">
             Acquista
           </a>
-          <a className="best-event-cart-page-nav-link" href="#ticket">
+          <a className="best-event-cart-page-nav-link" href="#ticket" onClick={handlePreventDefault}>
             Ticket
           </a>
-          <a className="best-event-cart-page-nav-link" href="#contatti">
+          <a className="best-event-cart-page-nav-link" href="#contatti" onClick={handlePreventDefault}>
             Contatti
           </a>
           <button
@@ -163,7 +164,6 @@ const CartPage = ({ eventListRef }) => {
             <p className="best-event-cart-page-total">Totale: <span>{(parseFloat(event.price) * quantity).toFixed(4)} ETH</span></p>
           </div>
           <button className="best-event-cart-page-checkout-button">Acquista ora</button>
-          {/* Ensure this button's style remains consistent */}
           <button onClick={handleBackToEvents} className="best-event-cart-page-back-to-events">
             Torna agli eventi
           </button>

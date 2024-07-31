@@ -31,30 +31,9 @@ const events = [
     description: 'Esplora le opere di artisti emergenti e affermati in una mostra innovativa.',
     image: image3,
   },
-  {
-    id: 4,
-    date: { month: 'Giu', day: 14 },
-    title: 'Matera Film Festival',
-    description: "Scopri un'esperienza unica con esibizioni artistiche, workshop e incontri con autori di fama internazionale.",
-    image: image1,
-  },
-  {
-    id: 5,
-    date: { month: 'Lug', day: 20 },
-    title: 'Concerto sotto le stelle',
-    description: "Vivi una serata magica con un concerto all'aperto nelle suggestive cornici dei Sassi.",
-    image: image2,
-  },
-  {
-    id: 6,
-    date: { month: 'Ago', day: 18 },
-    title: "Mostra d'Arte Contemporanea",
-    description: 'Esplora le opere di artisti emergenti e affermati in una mostra innovativa.',
-    image: image3,
-  },
 ];
 
-const Wishlist = () => {
+const Wishlist = ({ footerRef }) => {
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
@@ -63,6 +42,15 @@ const Wishlist = () => {
 
   const handleEventsClick = () => {
     navigate('/upcomingevents');
+  };
+
+  const handleContactClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      if (footerRef.current) {
+        footerRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
@@ -79,8 +67,8 @@ const Wishlist = () => {
           <ul className="wishlist-nav-links">
             <li onClick={handleEventsClick} style={{ cursor: 'pointer' }}>Eventi</li>
             <li>Acquista</li>
-            <li>Ticket</li>
-            <li>Contatti</li>
+            <li onClick={(e) => e.preventDefault()}>Ticket</li>
+            <li onClick={handleContactClick} style={{ cursor: 'pointer' }}>Contatti</li>
           </ul>
           <div className="wishlist-icons">
             <button className="connect-wallet-btn">Connetti Wallet</button>

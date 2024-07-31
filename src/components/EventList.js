@@ -65,7 +65,6 @@ const events = [
     height: '280px',
     price: '0.0003 ETH'
   },
-  // Hidden events
   {
     image: './image1.jpg',
     title: 'Matera Film Festival',
@@ -98,15 +97,30 @@ const events = [
   }
 ];
 
+const months = [
+  'January', 'February', 'March', 'April', 'May', 'June', 
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+const categories = ['Concert', 'Sports', 'Theater', 'Family'];
+
 const EventList = ({ eventListRef }) => {
   const [selectedFilter, setSelectedFilter] = useState(null);
   const [showHiddenEvents, setShowHiddenEvents] = useState(false);
+  const [filterOptions, setFilterOptions] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
 
   const handleFilterClick = (filter) => {
     setSelectedFilter(filter);
-    console.log(`Filter selected: ${filter}`);
-    // Add your filter logic here
+    setShowDropdown(true);
+    if (filter === 'Data') {
+      setFilterOptions(months);
+    } else if (filter === 'Categoria') {
+      setFilterOptions(categories);
+    } else {
+      setFilterOptions([]);
+    }
   };
 
   const handleToggleHiddenEvents = () => {
@@ -122,36 +136,41 @@ const EventList = ({ eventListRef }) => {
     navigate('/profile'); // Navigate to the Wishlist page
   };
 
+  const handleOptionSelect = (option) => {
+    console.log(`Selected ${option}`);
+    setShowDropdown(false);
+    // Implement filter logic based on selected option here
+  };
+
   return (
     <div ref={eventListRef} className="event-section">
       <div className="section-header">
         <h2 className="section-title">Prossimi Eventi</h2>
         <div className="filter-buttons">
-        <button className={`filter-button ${selectedFilter === 'Data' ? 'active' : ''}`} onClick={() => handleFilterClick('Data')}>
-  Data
-  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
-    <path d="M1.3396 1L6.3396 6L11.3396 1" stroke="#1D275F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-</button>
-<button className={`filter-button ${selectedFilter === 'Tipologia' ? 'active' : ''}`} onClick={() => handleFilterClick('Tipologia')}>
-  Tipologia
-  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
-    <path d="M1.3396 1L6.3396 6L11.3396 1" stroke="#1D275F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-</button>
-<button className={`filter-button ${selectedFilter === 'Categoria' ? 'active' : ''}`} onClick={() => handleFilterClick('Categoria')}>
-  Categoria
-  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
-    <path d="M1.3396 1L6.3396 6L11.3396 1" stroke="#1D275F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-</button>
-
-          <button className={`filter-button ${selectedFilter === 'Categoria' ? 'active' : ''}`} onClick={() => handleFilterClick('Categoria')}>
-            Categoria
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
-              <path d="M1.3396 1L6.3396 6L11.3396 1" stroke="#1D275F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
+          <FilterButton
+            filter="Data"
+            selectedFilter={selectedFilter}
+            handleFilterClick={handleFilterClick}
+            showDropdown={showDropdown && selectedFilter === 'Data'}
+            filterOptions={filterOptions}
+            handleOptionSelect={handleOptionSelect}
+          />
+          <FilterButton
+            filter="Tipologia"
+            selectedFilter={selectedFilter}
+            handleFilterClick={handleFilterClick}
+            showDropdown={showDropdown && selectedFilter === 'Tipologia'}
+            filterOptions={filterOptions}
+            handleOptionSelect={handleOptionSelect}
+          />
+          <FilterButton
+            filter="Categoria"
+            selectedFilter={selectedFilter}
+            handleFilterClick={handleFilterClick}
+            showDropdown={showDropdown && selectedFilter === 'Categoria'}
+            filterOptions={filterOptions}
+            handleOptionSelect={handleOptionSelect}
+          />
         </div>
       </div>
       <div className="event-list">
@@ -190,5 +209,32 @@ const EventList = ({ eventListRef }) => {
     </div>
   );
 };
+
+const FilterButton = ({ filter, selectedFilter, handleFilterClick, showDropdown, filterOptions, handleOptionSelect }) => (
+  <div className="filter-button-wrapper">
+    <button
+      className={`filter-button ${selectedFilter === filter ? 'active' : ''}`}
+      onClick={() => handleFilterClick(filter)}
+    >
+      {filter}
+      <SvgArrow />
+    </button>
+    {showDropdown && (
+      <div className="filter-dropdown">
+        {filterOptions.map((option, index) => (
+          <div key={index} className="filter-option" onClick={() => handleOptionSelect(option)}>
+            {option}
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+);
+
+const SvgArrow = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none" aria-hidden="true">
+    <path d="M1.3396 1L6.3396 6L11.3396 1" stroke="#1D275F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
 export default EventList;

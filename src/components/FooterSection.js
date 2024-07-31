@@ -1,18 +1,26 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FooterSection.css';
-import logo from './Logo.png'; // Make sure to update the path to your logo image
+import logo from './Logo.png'; // Update path if necessary
 
-const FooterSection = () => {
+const FooterSection = React.forwardRef((props, ref) => {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    navigate('/signout'); // Navigate to the signout page
+    event.preventDefault(); // Prevent default form submission
+    const email = event.target.email.value;
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    // Construct mailto link
+    const mailtoLink = `mailto:${email}?subject=Subscription&body=Thank you for subscribing to our newsletter.`;
+    // Open the mailto link
+    window.location.href = mailtoLink;
   };
 
   return (
-    <footer className="footer-wrapper">
+    <footer className="footer-wrapper" ref={ref}>
       <div className="footer-content">
         <div className="footer-column">
           <img src={logo} alt="EventiNFT Logo" className="footer-logo" />
@@ -56,6 +64,6 @@ const FooterSection = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default FooterSection;

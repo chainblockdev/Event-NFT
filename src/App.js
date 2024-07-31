@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
@@ -16,33 +15,34 @@ import Wishlist from './components/Wishlist';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
 import BlogDetails from './components/BlogDetails';
-import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop component
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   const eventListRef = useRef(null);
+  const footerRef = useRef(null);
 
   return (
     <Router>
-      <ScrollToTop /> {/* Use ScrollToTop component */}
+      <ScrollToTop />
       <div className="App">
         <Routes>
           <Route path="/" element={
             <>
-              <HeroSection eventListRef={eventListRef} />
+              <HeroSection eventListRef={eventListRef} footerRef={footerRef} />
               <EventList eventListRef={eventListRef} />
               <TicketPurchase />
               <WalletSection />
               <EventsOfTheWeek />
               <BrandsSection />
               <BlogSection />
-              <FooterSection />
+              <FooterSection ref={footerRef} />
             </>
           } />
           <Route path="/event/:id" element={<MateraEvents />} />
           <Route path="/upcomingevents" element={<UpcomingEvents />} />
           <Route path="/cart" element={<CartPage eventListRef={eventListRef} />} />
-          <Route path="/profile" element={<Wishlist />} />
+          <Route path="/profile" element={<Wishlist footerRef={footerRef} />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/blog" element={<BlogDetails />} />

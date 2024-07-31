@@ -6,29 +6,28 @@ import cartIcon from '../assets/icons/cart.jpg';
 import profileIcon from '../assets/icons/profile.jpg';
 import SearchBar from './SearchBar';
 
-const HeroSection = ({ eventListRef }) => {
+const HeroSection = ({ eventListRef, footerRef }) => {
   const navigate = useNavigate();
   const [eventType, setEventType] = useState('Concerto Jazz');
   const [location, setLocation] = useState('Sassi di Matera');
   const [date, setDate] = useState('Luglio');
 
-  const handleCartClick = () => {
-    navigate('/cart');
+  // Handler to reload the page
+  const handleLogoClick = () => {
+    window.location.reload();
   };
 
-  const handleProfileClick = () => {
-    navigate('/signin');
-  };
-
-  const handleAcquistaClick = () => {
+  // Handler to scroll to the Event List section
+  const handleScrollToEvents = () => {
     if (eventListRef && eventListRef.current) {
       eventListRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const handleScopriClick = () => {
-    if (eventListRef && eventListRef.current) {
-      eventListRef.current.scrollIntoView({ behavior: 'smooth' });
+  // Handler to scroll to the Footer section
+  const handleScrollToFooter = () => {
+    if (footerRef && footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -36,17 +35,17 @@ const HeroSection = ({ eventListRef }) => {
     <section className="hero-wrapper">
       <div className="gradient-overlay" />
       <nav className="nav-bar">
-        <div className="logo-container">
+        <div className="logo-container" onClick={handleLogoClick}>
           <img src={logo} alt="EventiNFT Logo" className="logo-img" />
         </div>
         <div className="nav-links">
           <Link className="nav-link" to="/upcomingevents">Eventi</Link>
-          <a className="nav-link" href="#acquista">Acquista</a>
+          <a className="nav-link" href="#acquista" onClick={(e) => { e.preventDefault(); handleScrollToEvents(); }}>Acquista</a>
           <a className="nav-link" href="#ticket">Ticket</a>
-          <a className="nav-link" href="#contatti">Contatti</a>
+          <a className="nav-link" href="#contatti" onClick={(e) => { e.preventDefault(); handleScrollToFooter(); }}>Contatti</a>
           <button className="wallet-button" aria-label="Connect Wallet">Connetti Wallet</button>
-          <img src={cartIcon} alt="Cart" className="nav-icon" onClick={handleCartClick} />
-          <img src={profileIcon} alt="Profile" className="nav-icon" onClick={handleProfileClick} />
+          <img src={cartIcon} alt="Cart" className="nav-icon" onClick={() => navigate('/cart')} />
+          <img src={profileIcon} alt="Profile" className="nav-icon" onClick={() => navigate('/signin')} />
         </div>
       </nav>
       <div className="hero-content">
@@ -59,8 +58,8 @@ const HeroSection = ({ eventListRef }) => {
           Scopri un nuovo modo di vivere gli eventi nella storica città di Matera. Grazie alla tecnologia NFT (Non-Fungible Token), puoi acquistare biglietti unici e collezionabili per una vasta gamma di eventi culturali, concerti, spettacoli e molto altro. Sperimenta la fusione tra tradizione e innovazione in una delle città più affascinanti del mondo.
         </p>
         <div className="hero-buttons">
-          <button className="hero-button primary" aria-label="Purchase Tickets" onClick={handleAcquistaClick}>Acquista</button>
-          <button className="hero-button" aria-label="Discover More" onClick={handleScopriClick}>Scopri</button>
+          <button className="hero-button primary" aria-label="Purchase Tickets" onClick={handleScrollToEvents}>Acquista</button>
+          <button className="hero-button" aria-label="Discover More" onClick={handleScrollToEvents}>Scopri</button>
         </div>
       </div>
       <SearchBar

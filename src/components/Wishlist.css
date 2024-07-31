@@ -34,7 +34,8 @@
 }
 
 .wishlist-logo {
-  height: 40px;
+  width: 200px;
+    height: auto;
 }
 
 .wishlist-nav-links {

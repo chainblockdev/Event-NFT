@@ -80,6 +80,32 @@
   background-color: #DDE2FF; /* Active button background color */
 }
 
+.filter-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-dropdown {
+  position: absolute;
+  border-radius: 20px;
+  background: #F2F4FF;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  z-index: 1000;
+  left: 23px;
+}
+
+.filter-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.filter-option:hover {
+  background-color: #f0f0f0;
+}
+
+
 /* Decorative line below the section header */
 .section-header::after {
   content: '';

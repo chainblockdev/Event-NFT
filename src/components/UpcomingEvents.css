@@ -56,6 +56,8 @@
     font-weight: 500;
     line-height: normal;
     margin-right: 50px;
+     border: none;
+     background: transparent;
 }
 
 /* Wallet button styling in background section */
@@ -118,7 +120,7 @@
     color: #242565;
     margin-bottom: 20px;
     text-align: center;
-    margin-left: -520px;
+    margin-left: -690px;
 }
 
 /* Event cards container styling */
