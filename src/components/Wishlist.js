@@ -31,6 +31,27 @@ const events = [
     description: 'Esplora le opere di artisti emergenti e affermati in una mostra innovativa.',
     image: image3,
   },
+  {
+    id: 4,
+    date: { month: 'Giu', day: 14 },
+    title: 'Matera Film Festival',
+    description: "Scopri un'esperienza unica con esibizioni artistiche, workshop e incontri con autori di fama internazionale.",
+    image: image1,
+  },
+  {
+    id: 5,
+    date: { month: 'Lug', day: 20 },
+    title: 'Concerto sotto le stelle',
+    description: "Vivi una serata magica con un concerto all'aperto nelle suggestive cornici dei Sassi.",
+    image: image2,
+  },
+  {
+    id: 6,
+    date: { month: 'Ago', day: 18 },
+    title: "Mostra d'Arte Contemporanea",
+    description: 'Esplora le opere di artisti emergenti e affermati in una mostra innovativa.',
+    image: image3,
+  },
 ];
 
 const Wishlist = ({ footerRef }) => {
