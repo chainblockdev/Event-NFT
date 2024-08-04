@@ -1,0 +1,15 @@
+.profile-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-details {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .profile-details img {
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  

@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import './HeroSection.css';
-import logo from '../assets/icons/Logo.png';
-import cartIcon from '../assets/icons/cart.jpg';
-import profileIcon from '../assets/icons/profile.jpg';
+import Navbar from './Navbar'; // Import the Navbar component
 import SearchBar from './SearchBar';
 
 const HeroSection = ({ eventListRef, footerRef }) => {
-  const navigate = useNavigate();
   const [eventType, setEventType] = useState('Concerto Jazz');
   const [location, setLocation] = useState('Sassi di Matera');
   const [date, setDate] = useState('Luglio');
-
-  // Handler to reload the page
-  const handleLogoClick = () => {
-    window.location.reload();
-  };
 
   // Handler to scroll to the Event List section
   const handleScrollToEvents = () => {
@@ -34,20 +25,7 @@ const HeroSection = ({ eventListRef, footerRef }) => {
   return (
     <section className="hero-wrapper">
       <div className="gradient-overlay" />
-      <nav className="nav-bar">
-        <div className="logo-container" onClick={handleLogoClick}>
-          <img src={logo} alt="EventiNFT Logo" className="logo-img" />
-        </div>
-        <div className="nav-links">
-          <Link className="nav-link" to="/upcomingevents">Eventi</Link>
-          <a className="nav-link" href="#acquista" onClick={(e) => { e.preventDefault(); handleScrollToEvents(); }}>Acquista</a>
-          <a className="nav-link" href="#ticket">Ticket</a>
-          <a className="nav-link" href="#contatti" onClick={(e) => { e.preventDefault(); handleScrollToFooter(); }}>Contatti</a>
-          <button className="wallet-button" aria-label="Connect Wallet">Connetti Wallet</button>
-          <img src={cartIcon} alt="Cart" className="nav-icon" onClick={() => navigate('/cart')} />
-          <img src={profileIcon} alt="Profile" className="nav-icon" onClick={() => navigate('/signin')} />
-        </div>
-      </nav>
+      <Navbar handleScrollToEvents={handleScrollToEvents} handleScrollToFooter={handleScrollToFooter} /> {/* Include the Navbar component */}
       <div className="hero-content">
         <h1 className="hero-title">
           Benvenuti a Matera

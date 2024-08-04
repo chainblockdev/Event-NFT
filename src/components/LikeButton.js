@@ -16,7 +16,7 @@ const LikeButton = ({ onHeartClick }) => {
     if (onHeartClick) {
       onHeartClick(e);
     }
-    navigate('/profile'); // Navigate to profile (wishlist) page
+    navigate('/wishlist'); // Navigate to wishlist page
     window.scrollTo(0, 0); // Ensure the scroll position is set to the top
   };
 

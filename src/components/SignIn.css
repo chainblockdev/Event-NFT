@@ -22,18 +22,25 @@
   margin-bottom: 1.5rem;
 }
 
-.logo-icon {
-  width: 50px;
-  height: 50px;
+.sign-in-logo-container {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+  margin-left: 70px;
 }
 
-.sign-in-header h2 {
-  font-size: 1.5rem;
-  margin: 0;
+.sign-in-logo-icon {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 0.5rem;
 }
 
-.sign-in-form .form-group {
+.sign-in-logo-text {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+.sign-in-form .sign-in-form-group {
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -52,20 +59,33 @@
   border-radius: 4px;
 }
 
-.form-group.remember-me {
+.sign-in-form-group.sign-in-remember-me {
   display: flex;
   align-items: center;
 }
 
-.form-group.remember-me input {
+.sign-in-form-group.sign-in-remember-me input {
   margin-right: 0.5rem;
   transform: translateY(2px); /* Adjust this value if needed to align with the text */
 }
 
-.btn-primary {
+.sign-in-btn-primary {
   width: 100%;
   padding: 0.75rem;
-  background-color: #1a73e8;
+  border-radius: 10px;
+  background: #f5167e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sign-in-btn-secondary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f44336;
   color: white;
   border: none;
   border-radius: 4px;
